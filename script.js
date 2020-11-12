@@ -4,6 +4,9 @@
 // http://geodb-cities-api.wirefreethought.com/
 // https://developers.google.com/places/web-service/photos
 // https://momentjs.com/
+// https://www.triposo.com/
+// ^ don't have to use all of these! read up first
+
 
 // all functionality on the front page index
 // navbar, with page information and about button
