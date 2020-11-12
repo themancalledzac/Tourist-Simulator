@@ -1,1 +1,1 @@
-// main JS file for Project 1
+// main JS file for Project
