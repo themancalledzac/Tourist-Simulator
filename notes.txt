@@ -10,4 +10,11 @@ uses triposo predefined cities to refer to
 
 be able to save previously searched destinations or persistent added cards on page
 
-search function appends a new card to list of cards with the same functionality asthe default cards
+search function appends a new card to list of cards with the same functionality as the default cards
+
+WHEN generated/on page, cards will display: country name, city name, picture representing city taken from triposo
+
+WHEN clicked, card will expand to take up page, disappearing other cards on page.
+information displayed will be: alternate, larger picture of city, 3 points of interest (with pictures?) and text describing them, weather info, time?
+
+WHEN close button on expanded card is clicked, card will shrink down to initial size, other cards return to page where they were
