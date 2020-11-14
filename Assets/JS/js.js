@@ -68,9 +68,11 @@
 // yx4cnfzccsyrugqslwb2eqc2s92obaye
 
 // https://www.triposo.com/api/20200803/location.json?id=London&account=<account ID>&token=<API token>
+function triposoAPI() {
 var chosenLocation = "Amsterdam";
 var triposoAPIKey = "yx4cnfzccsyrugqslwb2eqc2s92obaye";
 var triposoAPIToken = "7ZTLRO4H";
 var triposoURL = "https://www.triposo.com/api/20200803/location.json?id=" + chosenLocation + "&account=" + triposoAPIKey + "&token=" + triposoAPIToken;
 
 console.log(triposoURL);
+};
