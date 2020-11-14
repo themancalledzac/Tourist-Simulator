@@ -59,7 +59,8 @@
 
 
 
-
+// search first off
+// triposoAPI()
 
 // Zac's playground
 
@@ -68,20 +69,23 @@
 // yx4cnfzccsyrugqslwb2eqc2s92obaye
 
 // https://www.triposo.com/api/20200803/location.json?id=London&account=<account ID>&token=<API token>
-function triposoAPI() {
-var chosenLocation = "Amsterdam";
-var triposoAPIKey = "yx4cnfzccsyrugqslwb2eqc2s92obaye";
-var triposoAPIToken = "7ZTLRO4H";
-var triposoURL = "https://www.triposo.com/api/20200803/location.json?id=" + chosenLocation + "&account=" + triposoAPIToken + "&token=" + triposoAPIKey;
+function triposoAPI( chosenLocation ) {
+// var chosenLocation = "Amsterdam";
+  var triposoAPIKey = "yx4cnfzccsyrugqslwb2eqc2s92obaye";
+  var triposoAPIToken = "7ZTLRO4H";
+  var triposoURL = "https://www.triposo.com/api/20200803/location.json?id=" + chosenLocation + "&account=" + triposoAPIToken + "&token=" + triposoAPIKey;
 
-console.log(triposoURL);
+  console.log(triposoURL);
+  $.ajax({ url: triposoURL,  method: "GET"
+  
+      }).then(function(response) {
+        // response sent to other function
+  
+        console.log(triposoURL)
+        console.log(response)
+      });
 };
 
-    $.ajax({
-
-      url: queryURL,
-
-      method: "GET"
 
 
 
@@ -163,11 +167,6 @@ var queryURL = "https://api.openweathermap.org/data/2.5/weather?q=" +location; "
 
 
 
-    }).then(function(response) {
-
-      console.log(queryURL)
-      console.log(response)
-
 
 
      var tempF=(response.main.temp-273.15)* 1.80 + 32;
@@ -181,7 +180,6 @@ var queryURL = "https://api.openweathermap.org/data/2.5/weather?q=" +location; "
 
     $(".#").text("Wind speed:"+" "+response.wind.speed.toFixed(0));
 
-    });
 
 
 
