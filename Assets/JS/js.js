@@ -156,7 +156,7 @@ var APIKey = "a0ed00a1e03e86452a0e4c5419b896b8";
 
 //location input
 
-var location=input
+var location=$("#cityInput");
 
 // openweathermap.org
 var queryURL = "https://api.openweathermap.org/data/2.5/weather?q=" +location; "&appid=" + APIKey;
