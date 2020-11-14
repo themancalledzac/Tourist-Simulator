@@ -6,7 +6,7 @@ search function uses triposo api to query city names
 i feel lucky button picks random city. from triposo list of cities?
 
 id="recommendations", the recommendation boxes, uses preset cities listed as popular destinations
-uses triposo predefined cities to refer to
+uses predefined cities from an array to refer to
 
 be able to save previously searched destinations or persistent added cards on page
 
@@ -15,6 +15,6 @@ search function appends a new card to list of cards with the same functionality 
 WHEN generated/on page, cards will display: country name, city name, picture representing city taken from triposo
 
 WHEN clicked, card will expand to take up page, disappearing other cards on page.
-information displayed will be: alternate, larger picture of city, 3 points of interest (with pictures?) and text describing them, weather info, time?
+information displayed will be: alternate/larger picture of city?, 3 points of interest (with pictures?) and text describing them, weather info, time?
 
 WHEN close button on expanded card is clicked, card will shrink down to initial size, other cards return to page where they were
