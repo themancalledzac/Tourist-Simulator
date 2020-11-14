@@ -69,7 +69,6 @@
 
 // https://www.triposo.com/api/20200803/location.json?id=London&account=<account ID>&token=<API token>
 function triposoAPI() {
-<<<<<<< HEAD
 var chosenLocation = "Amsterdam";
 var triposoAPIKey = "yx4cnfzccsyrugqslwb2eqc2s92obaye";
 var triposoAPIToken = "7ZTLRO4H";
@@ -153,7 +152,7 @@ var APIKey = "a0ed00a1e03e86452a0e4c5419b896b8";
 
 //location input
 
-var location=input
+var location=$("#cityInput");
 
 // openweathermap.org
 var queryURL = "https://api.openweathermap.org/data/2.5/weather?q=" +location; "&appid=" + APIKey;
@@ -187,17 +186,3 @@ var queryURL = "https://api.openweathermap.org/data/2.5/weather?q=" +location; "
 
 
 
-=======
-    var chosenLocation = "Amsterdam";
-    var triposoAPIKey = "yx4cnfzccsyrugqslwb2eqc2s92obaye";
-    var triposoAPIToken = "7ZTLRO4H";
-    var triposoURL = "https://www.triposo.com/api/20200803/location.json?id=" + chosenLocation + "&account=" + triposoAPIToken + "&token=" + triposoAPIKey;
-    
-    console.log(triposoURL);
-    };
-    
-    $.ajax({
-        url: queryURL,
-        method: "GET"
-    })
->>>>>>> c79fe3dc3ef478c4d46aee7e792e946746ae0eb1
