@@ -1,0 +1,13 @@
+things to look into:
+css animations, css keyframes for changing card sizes
+
+nav bar about link should display popup/modal with project member names
+search function uses triposo api to query city names
+i feel lucky button picks random city. from triposo list of cities?
+
+id="recommendations", the recommendation boxes, uses preset cities listed as popular destinations
+uses triposo predefined cities to refer to
+
+be able to save previously searched destinations or persistent added cards on page
+
+search function appends a new card to list of cards with the same functionality asthe default cards
