@@ -14,13 +14,19 @@
     -webkit-justify-content: center;
         -ms-flex-pack: center;
             justify-content: center;
+            
   }
   
   .hero-section .hero-section-text {
     color: #fefefe;
     text-shadow: 1px 1px 2px #0a0a0a;
+    
   }
   
 #city {
     border: 1px solid;
+    
+}
+.button {
+    border-radius: 10px;
 }
