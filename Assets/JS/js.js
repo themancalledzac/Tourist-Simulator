@@ -69,6 +69,125 @@
 
 // https://www.triposo.com/api/20200803/location.json?id=London&account=<account ID>&token=<API token>
 function triposoAPI() {
+<<<<<<< HEAD
+var chosenLocation = "Amsterdam";
+var triposoAPIKey = "yx4cnfzccsyrugqslwb2eqc2s92obaye";
+var triposoAPIToken = "7ZTLRO4H";
+var triposoURL = "https://www.triposo.com/api/20200803/location.json?id=" + chosenLocation + "&account=" + triposoAPIKey + "&token=" + triposoAPIToken;
+
+console.log(triposoURL);
+};
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+var APIKey = "a0ed00a1e03e86452a0e4c5419b896b8";
+
+//location input
+
+var location=input
+
+// openweathermap.org
+var queryURL = "https://api.openweathermap.org/data/2.5/weather?q=" +location; "&appid=" + APIKey;
+
+
+    $.ajax({
+
+      url: queryURL,
+
+      method: "GET"
+
+    }).then(function(response) {
+
+      console.log(queryURL)
+      console.log(response)
+
+
+
+     var tempF=(response.main.temp-273.15)* 1.80 + 32;
+
+
+    $(".#").html("<h1>"+response.name +" "+ "Weather Details</h1>");
+
+    $(".#").text("Temperature:"+" "+tempF.toFixed(0));
+
+    $(".#").text("Humitidty:"+" "+response.main.humidity);
+
+    $(".#").text("Wind speed:"+" "+response.wind.speed.toFixed(0));
+
+    });
+
+
+
+=======
     var chosenLocation = "Amsterdam";
     var triposoAPIKey = "yx4cnfzccsyrugqslwb2eqc2s92obaye";
     var triposoAPIToken = "7ZTLRO4H";
@@ -81,3 +200,4 @@ function triposoAPI() {
         url: queryURL,
         method: "GET"
     })
+>>>>>>> c79fe3dc3ef478c4d46aee7e792e946746ae0eb1
