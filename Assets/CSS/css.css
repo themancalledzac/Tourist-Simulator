@@ -27,4 +27,6 @@
     border: 1px solid;
     
 }
-
+.button {
+    border-radius: 10px;
+}
