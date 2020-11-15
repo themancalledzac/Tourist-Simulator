@@ -124,12 +124,13 @@ $("#citySearchBtn").on("click", function(event) {
 
   // This line grabs the input from the textbox
   var city = $("#citySearch").val().trim();
+  var capitalizeCity = city.charAt(0).toUpperCase() + city.slice(1);
 
   // Adding movie from the textbox to our array
-  cities.push(city);
+  cities.push(capitalizeCity);
 
   // Calling renderButtons which handles the processing of our movie array
-  triposoAPI(city);
+  triposoAPI(capitalizeCity);
   // console.log(city);
       });
 
