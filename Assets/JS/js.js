@@ -55,39 +55,83 @@
 
 
 
+// GLOBAL VARIABLES
+var cities = [];
 
-
-
-
-// search first off
-// triposoAPI()
 
 // Zac's playground
 
-// https://www.triposo.com/api/
-// account ID: 7ZTLRO4H
-// yx4cnfzccsyrugqslwb2eqc2s92obaye
-
-// https://www.triposo.com/api/20200803/location.json?id=London&account=<account ID>&token=<API token>
 function triposoAPI( chosenLocation ) {
-var chosenLocation = "Amsterdam";
-  var triposoAPIKey = "yx4cnfzccsyrugqslwb2eqc2s92obaye";
-  var triposoAPIToken = "7ZTLRO4H";
-  var triposoURL = "https://www.triposo.com/api/20200803/location.json?id=" + chosenLocation + "&account=" + triposoAPIToken + "&token=" + triposoAPIKey;
+    $("#searchedCity").empty();
+  for (var i = 0; i < cities.length; i++) {
 
-  console.log(triposoURL);
-  $.ajax({ url: triposoURL,  method: "GET"
+    var city = cities[i];
+    // var chosenLocation = $(city);
+    var triposoAPIKey = "7ZTLRO4H";
+    var triposoAPIToken = "yx4cnfzccsyrugqslwb2eqc2s92obaye";
+    var triposoURL = "https://www.triposo.com/api/20200803/location.json?id=" + city + "&account=" + triposoAPIKey + "&token=" + triposoAPIToken;
   
-      }).then(function(response) {
-        // response sent to other function
-        
-        console.log(triposoURL)
-        console.log(response.results[0].)
-      });
+    console.log(triposoURL);
+    $.ajax({ url: triposoURL,  method: "GET"
+    
+        }).then(function(response) {
+  
+          console.log(response.results[0]);
+          // Creating a div to hold the city & information
+          var cityDiv = $("<div class='searchedCity'>");
+  
+          // Storing the city name data
+          var cityEl = response.results[0].id;
+          
+          // Creating an element to have the city name displayed
+          var pOne = $("<h2>").text( cityEl );
+  
+          // Displaying the name
+          cityDiv.append(pOne);
+  
+          // Storing the country name
+          var countryName = response.results[0].country_id;
+  
+          // Creating an element to hold the country name
+          var pTwo = $("<h3>").text( countryName );
+  
+          // Displaying the country name
+          cityDiv.append(pTwo);
+  
+          // retreiving image URL
+          var imgURL = response.results[0].images[0].source_url;
+  
+          // creating an element to hold the image
+          var image = $("<img>").attr("src", imgURL);
+  
+          // Appending the image
+          cityDiv.append(image);
+          
+          // Putting the entire city div above previous city divs.
+          $("#searchedCity").prepend(cityDiv);
+  
+          // console.log(response.results)
+          // console.log(triposoURL)
+        });
+  }
+
 };
 
 
+// Click event listerner to our search button.
+$("#citySearchBtn").on("click", function(event) {
+  event.preventDefault();
 
+  // This line grabs the input from the textbox
+  var city = $("#citySearch").val().trim();
+
+  // Adding movie from the textbox to our array
+  cities.push(city);
+
+  // Calling renderButtons which handles the processing of our movie array
+  triposoAPI(city);
+  // console.log(city);
+      });
 
 
 // LOCATION: City, Country, Image
@@ -99,6 +143,7 @@ var chosenLocation = "Amsterdam";
     // images
     // WEATHER info from weatherAPI
     // Time if allowed
+    // Native Language
 
 
 
@@ -164,29 +209,29 @@ var chosenLocation = "Amsterdam";
 
 
 
-var APIKey = "a0ed00a1e03e86452a0e4c5419b896b8";
+// var APIKey = "a0ed00a1e03e86452a0e4c5419b896b8";
 
-//location input
+// //location input
 
-var location=input
+// var location=input
 
-// openweathermap.org
-var queryURL = "https://api.openweathermap.org/data/2.5/weather?q=" +location; "&appid=" + APIKey;
+// // openweathermap.org
+// var queryURL = "https://api.openweathermap.org/data/2.5/weather?q=" +location; "&appid=" + APIKey;
 
 
 
 
 
-     var tempF=(response.main.temp-273.15)* 1.80 + 32;
+//      var tempF=(response.main.temp-273.15)* 1.80 + 32;
 
 
-    $(".#").html("<h1>"+response.name +" "+ "Weather Details</h1>");
+//     $(".#").html("<h1>"+response.name +" "+ "Weather Details</h1>");
 
-    $(".#").text("Temperature:"+" "+tempF.toFixed(0));
+//     $(".#").text("Temperature:"+" "+tempF.toFixed(0));
 
-    $(".#").text("Humitidty:"+" "+response.main.humidity);
+//     $(".#").text("Humitidty:"+" "+response.main.humidity);
 
-    $(".#").text("Wind speed:"+" "+response.wind.speed.toFixed(0));
+//     $(".#").text("Wind speed:"+" "+response.wind.speed.toFixed(0));
 
 
 

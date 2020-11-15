@@ -19,8 +19,8 @@
       </div>
       <div class="top-bar-right">
         <ul class="menu">
-          <li><input type="search" placeholder="Enter City Name"></li>
-          <li><button type="button" class="button">Search</button></li>
+          <li><input id="citySearch" type="search" placeholder="Enter City Name"></li>
+          <li><button id="citySearchBtn" type="button" class="button">Search</button></li>
         </ul>
       </div>
     </div>
@@ -33,8 +33,8 @@
         <button class="button success">"I Feel Lucky" button</button>
       </div>
     </div>
-    <!--Recommendation boxes-->
-    <div class="row" id="Recommendations">
+    <!--Searched City boxes-->
+    <div class="row" id="searchedCity">
       <div class="columns large-4 medium-4" id="city">
         <h3>City Name 1</h3>
         <p>Country</p>
@@ -70,5 +70,6 @@
     <script>
       $(document).foundation();
     </script>
+    <script src="./Assets/JS/js.js" ></script>
   </body>
 </html>
