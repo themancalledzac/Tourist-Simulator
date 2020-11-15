@@ -70,7 +70,7 @@
 
 // https://www.triposo.com/api/20200803/location.json?id=London&account=<account ID>&token=<API token>
 function triposoAPI( chosenLocation ) {
-// var chosenLocation = "Amsterdam";
+var chosenLocation = "Amsterdam";
   var triposoAPIKey = "yx4cnfzccsyrugqslwb2eqc2s92obaye";
   var triposoAPIToken = "7ZTLRO4H";
   var triposoURL = "https://www.triposo.com/api/20200803/location.json?id=" + chosenLocation + "&account=" + triposoAPIToken + "&token=" + triposoAPIKey;
@@ -80,9 +80,9 @@ function triposoAPI( chosenLocation ) {
   
       }).then(function(response) {
         // response sent to other function
-  
+        
         console.log(triposoURL)
-        console.log(response)
+        console.log(response.results[0].)
       });
 };
 
@@ -90,7 +90,15 @@ function triposoAPI( chosenLocation ) {
 
 
 
+// LOCATION: City, Country, Image
 
+// POI: called when clicked on card. pull:
+    // 3 points of interest
+    // descriptive text
+    // names of those points
+    // images
+    // WEATHER info from weatherAPI
+    // Time if allowed
 
 
 
