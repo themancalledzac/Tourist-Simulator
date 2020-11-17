@@ -17,3 +17,11 @@ During these trying Covid times, wouldn't you like to simulate being a Tourist?
 7. https://cloud.google.com/maps-platform/places
 8. http://geodb-cities-api.wirefreethought.com/
 9. https://openweathermap.org/api
+
+// frameworks and apis used:
+// https://get.foundation/index.html
+// https://openweathermap.org/api
+// http://geodb-cities-api.wirefreethought.com/
+// https://developers.google.com/places/web-service/photos
+// https://momentjs.com/
+// https://www.triposo.com/
