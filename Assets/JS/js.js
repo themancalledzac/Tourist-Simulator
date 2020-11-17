@@ -114,6 +114,7 @@ function triposoAPI( chosenLocation ) {
           // console.log(triposoURL)
         });
   }
+<<<<<<< HEAD
 
 };
 
@@ -128,19 +129,31 @@ $("#citySearchBtn").on("click", function(event) {
 
   // Adding movie from the textbox to our array
   cities.push(capitalizeCity);
+=======
+
+};
+>>>>>>> 6f63a14ab3017757cfa37f37d676639d1300da11
 
   // Calling renderButtons which handles the processing of our movie array
   triposoAPI(capitalizeCity);
   // console.log(city);
       });
 
+// Click event listerner to our search button.
+$("#citySearchBtn").on("click", function(event) {
+  event.preventDefault();
 
+<<<<<<< HEAD
 // LOCATION: City, Country, Image
 
 // Click event listerner to our search button.
 $("#citySearchBtn").on("click", function(event) {
   event.preventDefault();
 
+  // This line grabs the input from the textbox
+  var city = $("#citySearch").val().trim();
+  var capitalizeCity = city.charAt(0).toUpperCase() + city.slice(1);
+=======
   // This line grabs the input from the textbox
   var city = $("#citySearch").val().trim();
   var capitalizeCity = city.charAt(0).toUpperCase() + city.slice(1);
@@ -152,7 +165,28 @@ $("#citySearchBtn").on("click", function(event) {
   triposoAPI(capitalizeCity);
   // console.log(city);
       });
+>>>>>>> 6f63a14ab3017757cfa37f37d676639d1300da11
 
+  // Adding movie from the textbox to our array
+  cities.push(capitalizeCity);
+
+<<<<<<< HEAD
+  // Calling renderButtons which handles the processing of our movie array
+  triposoAPI(capitalizeCity);
+  // console.log(city);
+      });
+=======
+// LOCATION: City, Country, Image
+>>>>>>> 6f63a14ab3017757cfa37f37d676639d1300da11
+
+// POI: called when clicked on card. pull:
+    // 3 points of interest
+    // descriptive text
+    // names of those points
+    // images
+    // WEATHER info from weatherAPI
+    // Time if allowed
+    // Native Language
 
 // LOCATION: City, Country, Image
 
