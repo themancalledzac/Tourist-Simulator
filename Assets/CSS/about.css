@@ -74,7 +74,7 @@
   
   .card-user-container .card-user-social {
     background: #e6e6e6;
-    padding: 1rem;
+    padding: 0rem;
     text-align: center;
   }
   
@@ -82,13 +82,13 @@
     display: inline-block;
   }
   
-  .card-user-container .card-user-social ul li {
-    margin: 0 10px;
-    font-size: 1.2em;
+  .card-user-container .card-user-social ul i {
+    margin: 0 1px;
+    
     cursor: pointer;
   }
   
-  .card-user-container .card-user-social ul li:hover {
+  .card-user-container .card-user-social ul i:hover {
     -webkit-transform: scale(1.1);
         -ms-transform: scale(1.1);
             transform: scale(1.1);
@@ -98,7 +98,10 @@
     text-align: center;
     padding: 1rem;
   }
-  
+  .medium {
+    font-size: 35px;
+    padding: 0 10px;
+}
   
   
   
