@@ -22,8 +22,10 @@
       </div>
       <div class="top-bar-right">
         <ul class="menu">
-          <li><input id="cityInput" type ="search" placeholder="Enter City Name"></li>
-          <li><button type="button" class="button">Search</button></li>
+
+          <li><input id="citySearch" type="search" autocomplete="on" placeholder="Enter City Name"></li>
+          <li><button id="citySearchBtn" type="button" class="button">Search</button></li>
+
         </ul>
       </div>
     </div>
@@ -36,14 +38,14 @@
         <button class="button success">"I Feel Lucky" button</button>
       </div>
     </div>
-    <br>
-    <!--Recommendation boxes-->
-    <div class="row" id="Recommendations"></div>
-    <div class="card columns ">
-      <img class="card-img" src="https://placehold.it/350x300" alt="header" />
-      <div class="card-info">
-      <h1 class="card-title">Card Title</h1>
-      <p class="card-author">Author Name</p>
+
+    <!--Searched City boxes-->
+    <div class="row" id="searchedCity">
+      <div class="columns large-4 medium-4" id="city">
+        <h3>City Name 1</h3>
+        <p>Country</p>
+        <p>City Images as background</p>
+
       </div>
     </div>
     <div class="card columns ">
@@ -82,5 +84,6 @@
     <script>
       $(document).foundation();
     </script>
+    <script src="./Assets/JS/js.js" ></script>
   </body>
 </html>
