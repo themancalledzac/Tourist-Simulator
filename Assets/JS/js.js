@@ -209,18 +209,32 @@ $("#citySearchBtn").on("click", function(event) {
 
 
 
+ // openweathermap.org
+var APIKey = "a0ed00a1e03e86452a0e4c5419b896b8";
+var weatherURL = "https://www.api.openweathermap.org/data/2.5/weather?q=" + city + "&appid=" + APIKey;
+console.log(weatherURL);
+$.ajax({ url: weatherURL, 
+   method: "GET"
 
-// var APIKey = "a0ed00a1e03e86452a0e4c5419b896b8";
-
-// //location input
-
-
-// var location=input
-
-
-// // openweathermap.org
-// var queryURL = "https://api.openweathermap.org/data/2.5/weather?q=" +location; "&appid=" + APIKey;
-
+    }).then(function(response) {
+      
+      $("#citySearchBtn").on("click", function(event) {
+        event.preventDefault();
+      
+        // This line grabs the input from the textbox
+        var city = $("#citySearch").val().trim();
+        var capitalizeCity = city.charAt(0).toUpperCase() + city.slice(1);
+      
+        // Adding movie from the textbox to our array
+        cities.push(capitalizeCity);
+      
+        // Calling renderButtons which handles the processing of our movie array
+        triposoAPI(capitalizeCity);
+        // console.log(city);
+      });
+      
+      console.log(response)
+    
 
 
 
@@ -235,7 +249,7 @@ $("#citySearchBtn").on("click", function(event) {
 //     $(".#").text("Humitidty:"+" "+response.main.humidity);
 
 //     $(".#").text("Wind speed:"+" "+response.wind.speed.toFixed(0));
-
+    });
 
 
 
