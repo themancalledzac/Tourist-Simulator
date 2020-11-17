@@ -21,25 +21,25 @@
         </ul>
       </div>
       <div class="top-bar-right">
-        <ul class="menu">
+        <ul class="menu" id="menuBar">
 
           <li><input id="citySearch" type="search" autocomplete="on" placeholder="Enter City Name"></li>
           <li><button id="citySearchBtn" type="button" class="button">Search</button></li>
+          <LI><button id="luckyBtn" class="button success">I Feel Lucky!</button></LI>
 
         </ul>
       </div>
     </div>
     <!--Home page main screen with a large background picture-->
-    <div class="hero-section">
-      <div class="hero-section-text">
-        <h1>short brief of this website</h1>
-        <h5>explaination of feel lucky button</h5>
-        <br>
-        <button class="button success">"I Feel Lucky" button</button>
+    <div class="hero-section" id="picture">
+      <div class="hero-section-text" id="textMain">
+        <h1>About this website => Change to city tiele & weather info after search</h1>
+        <h5>How to use => change to city info after search</h5>
       </div>
     </div>
 
-    <!--Searched City boxes-->
+    <!--FOR FUTURE USE
+
     <div class="row" id="searchedCity">
       <div class="columns large-4 medium-4" id="city">
         <h3>City Name 1</h3>
@@ -62,21 +62,7 @@
       <p class="card-author">Author Name</p>
       </div>
     </div>
-    
-    </div>
-    <!--Google map on left 8/12, Key points on right 4/12, with current weather-->
-    <div class="row">
-      <!--weatherAPI-->
-      <p id="current weather of the city"></p>
-      <!--googleAPI-->
-      <div class="columns large-8" id="googleAPI">
-
-      </div>
-      <!--wikiAPI-->
-      <div class="columns large-4" id="wikiAPI">
-
-      </div>
-    </div>
+    -->
 
     <script src="https://code.jquery.com/jquery-2.1.4.min.js"></script>
     <script src="https://dhbhdrzi4tiry.cloudfront.net/cdn/sites/foundation.js"></script>
