@@ -1,26 +1,74 @@
 /* main css file for project */
 
 .hero-section {
-    background: url("https://www.australia.com/content/australia/en/places/brisbane-and-surrounds/guide-to-heron-island/jcr:content/hero/desktop.adapt.1920.high.jpg") 50% no-repeat;
-    background-size: cover;
-    height: 70vh;
-    text-align: center;
-    display: -webkit-flex;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-align-items: center;
-        -ms-flex-align: center;
-            align-items: center;
-    -webkit-justify-content: center;
-        -ms-flex-pack: center;
-            justify-content: center;
-  }
-  
-  .hero-section .hero-section-text {
-    color: #fefefe;
-    text-shadow: 1px 1px 2px #0a0a0a;
-  }
-  
-#city {
-    border: 1px solid;
+  background: url("https://www.australia.com/content/australia/en/places/brisbane-and-surrounds/guide-to-heron-island/jcr:content/hero/desktop.adapt.1920.high.jpg")
+    50% no-repeat;
+  background-size: cover;
+  height: 70vh;
+  text-align: center;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
 }
+
+.hero-section .hero-section-text {
+  color: #fefefe;
+  text-shadow: 1px 1px 2px #0a0a0a;
+}
+
+#city {
+  border: 1px solid;
+}
+.button {
+  border-radius: 10px;
+}
+
+
+.card {
+    width: 350px;
+  }
+  
+  .card-info {
+    padding: 1rem;
+    display: -ms-grid;
+    display: grid;
+    -ms-grid-rows: 1fr 2.5rem;
+        grid-template-rows: 1fr 2.5rem;
+    -ms-grid-columns: 3fr 1fr;
+        grid-template-columns: 3fr 1fr;
+  }
+  
+  .card-title {
+    font-size: 2rem;
+    grid-row: 1 / 2;
+    grid-column: 1 / 2;
+  }
+  
+  
+  .card-author {
+    grid-row: 2 / 3;
+    grid-column: 1 / 2;
+    -webkit-align-self: bottom;
+        -ms-flex-item-align: bottom;
+                -ms-grid-row-align: bottom;
+            align-self: bottom;
+  }
+  
+  .card-stats {
+    -webkit-align-self: bottom;
+        -ms-flex-item-align: bottom;
+                -ms-grid-row-align: bottom;
+            align-self: bottom;
+    justify-self: right;
+  }
+  
+  
+
+  
+  
