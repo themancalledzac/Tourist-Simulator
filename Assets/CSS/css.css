@@ -1,34 +1,32 @@
 /* main css file for project */
 
 .hero-section {
-    background: url("https://www.australia.com/content/australia/en/places/brisbane-and-surrounds/guide-to-heron-island/jcr:content/hero/desktop.adapt.1920.high.jpg") 50% no-repeat;
-    background-size: cover;
-    height: 70vh;
-    text-align: center;
-    display: -webkit-flex;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-align-items: center;
-        -ms-flex-align: center;
-            align-items: center;
-    -webkit-justify-content: center;
-        -ms-flex-pack: center;
-            justify-content: center;
-            
-  }
-  
-  .hero-section .hero-section-text {
-    color: #fefefe;
-    text-shadow: 1px 1px 2px #0a0a0a;
-    
-  }
-  
+  background: url("https://www.australia.com/content/australia/en/places/brisbane-and-surrounds/guide-to-heron-island/jcr:content/hero/desktop.adapt.1920.high.jpg")
+    50% no-repeat;
+  background-size: cover;
+  height: 70vh;
+  text-align: center;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+}
+
+.hero-section .hero-section-text {
+  color: #fefefe;
+  text-shadow: 1px 1px 2px #0a0a0a;
+}
+
 #city {
-    border: 1px solid;
-    
+  border: 1px solid;
 }
 .button {
-    border-radius: 10px;
+  border-radius: 10px;
 }
 
 
