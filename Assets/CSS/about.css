@@ -1,8 +1,9 @@
 
+
 .hero-section {
     background: url("https://images.pexels.com/photos/7096/people-woman-coffee-meeting.jpg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260") 50% no-repeat;
     background-size: cover;
-    height: 60vh;
+    height: 40vh;
     text-align: center;
     display: -webkit-flex;
     display: -ms-flexbox;
@@ -19,8 +20,15 @@
   .hero-section .hero-section-text {
     color: #fefefe;
     text-shadow: 1px 1px 2px #0a0a0a;
+    
   }
-  
+  .about-wrap {
+    text-align: center;
+    padding: 2rem;
+  }
+  .sub-headline {
+    color: #777777;
+  }
   
 .card-user-container {
     margin-bottom: 1rem;
