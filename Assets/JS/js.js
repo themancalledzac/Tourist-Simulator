@@ -214,7 +214,9 @@ $("#citySearchBtn").on("click", function(event) {
 
 // //location input
 
+
 // var location=input
+
 
 // // openweathermap.org
 // var queryURL = "https://api.openweathermap.org/data/2.5/weather?q=" +location; "&appid=" + APIKey;
