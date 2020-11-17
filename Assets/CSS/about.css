@@ -43,8 +43,8 @@
     display: block;
     margin: auto;
     border-radius: 50%;
-    width: 11.875rem;
-    height: 11.875rem;
+    width: 15rem;
+    height: 15rem;
     padding: 0.9375rem;
   }
   
@@ -55,27 +55,14 @@
   }
   
   .card-user-container .card-user-bio {
-    padding: 1rem;
+    padding: 0rem;
     text-align: center;
-  }
-  
-  .card-user-container .card-user-bio .location {
-    display: inline-block;
-    margin: 0 0.9375rem;
-    color: #767676;
-    font-size: 0.875rem;
-  }
-  
-  .card-user-container .card-user-bio .location-icon,
-  .card-user-container .card-user-bio .location-text {
-    display: inline-block;
-    padding: 0 0.3125rem;
   }
   
   .card-user-container .card-user-social {
-    background: #e6e6e6;
     padding: 0rem;
     text-align: center;
+    color: #767676;
   }
   
   .card-user-container .card-user-social ul {
@@ -84,7 +71,6 @@
   
   .card-user-container .card-user-social ul i {
     margin: 0 1px;
-    
     cursor: pointer;
   }
   
