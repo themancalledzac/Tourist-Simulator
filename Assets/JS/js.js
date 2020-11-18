@@ -90,7 +90,7 @@ function displayCity () {
 
 
 function previousCity () {
-  
+
 
 };
 
@@ -119,46 +119,41 @@ cities.push(capitalizeCity);
 
 
 
-    
-    
-    
-    
-    
 
 
 
 
-console.log(response.results[0]);
-// Creating a div to hold the city & information
-var cityDiv = $("<div class='searchedCity'>");
+// console.log(response.results[0]);
+// // Creating a div to hold the city & information
+// var cityDiv = $("<div class='searchedCity'>");
 
-// Storing the city name data
-var cityEl = response.results[0].id;
+// // Storing the city name data
+// var cityEl = response.results[0].id;
 
-// Creating an element to have the city name displayed
-var pOne = $("<h2>").text( cityEl );
+// // Creating an element to have the city name displayed
+// var pOne = $("<h2>").text( cityEl );
 
-// Displaying the name
-cityDiv.append(pOne);
+// // Displaying the name
+// cityDiv.append(pOne);
 
-// Storing the country name
-var countryName = response.results[0].country_id;
+// // Storing the country name
+// var countryName = response.results[0].country_id;
 
-// Creating an element to hold the country name
-var pTwo = $("<h3>").text( countryName );
+// // Creating an element to hold the country name
+// var pTwo = $("<h3>").text( countryName );
 
-// Displaying the country name
-cityDiv.append(pTwo);
+// // Displaying the country name
+// cityDiv.append(pTwo);
 
-// retreiving image URL
-var imgURL = response.results[0].images[0].source_url;
+// // retreiving image URL
+// var imgURL = response.results[0].images[0].source_url;
 
-// creating an element to hold the image
-var image = $("<img>").attr("src", imgURL);
+// // creating an element to hold the image
+// var image = $("<img>").attr("src", imgURL);
 
-// Appending the image
-cityDiv.append(image);
+// // Appending the image
+// cityDiv.append(image);
 
-// Putting the entire city div above previous city divs.
-$("#searchedCity").prepend(cityDiv);
+// // Putting the entire city div above previous city divs.
+// $("#searchedCity").prepend(cityDiv);
 
