@@ -17,6 +17,7 @@
             justify-content: center;
             
   }
+ 
   h1 {
     font-size: 70px;
     margin-bottom: 0rem;
@@ -42,9 +43,9 @@
   .about-wrap {
     text-align: center;
     padding: 2rem;
-    margin-bottom: 2rem;
-    margin-left: 5rem;
-    margin-right: 5rem;
+    margin-bottom: 1rem;
+    margin-left: 6rem;
+    margin-right: 6rem;
   }
   
   .sub-headline {
