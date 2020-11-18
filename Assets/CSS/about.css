@@ -17,18 +17,38 @@
             justify-content: center;
             
   }
-  
-  .hero-section .hero-section-text {
-    color: #fefefe;
-    text-shadow: 1px 1px 2px #0a0a0a;
+  h1 {
+    font-size: 70px;
+    margin-bottom: 0rem;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    
   }
+
+  h6 {
+    margin-top: 0rem;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    letter-spacing: 0.5rem;
+
+  }
+  .translucent-overlay {
+    max-width: 100%;
+    width: 100%;
+    background-color: rgba(4, 133, 109, 0.432);
+    padding: 0px;
+    color: #fefefe;
+  }
+  
   
   .about-wrap {
     text-align: center;
     padding: 2rem;
+    margin-bottom: 2rem;
   }
+  
   .sub-headline {
     color: #777777;
+    margin: 0;
+    
   }
   
 .card-user-container {
@@ -63,7 +83,7 @@
   .card-user-container .card-user-social {
     padding: 0rem;
     text-align: center;
-    color: #767676;
+    color: #777777;
   }
   
   .card-user-container .card-user-social ul {
