@@ -94,6 +94,34 @@ function triposoAPI( chosenLocation ) {
 };
 
 
+// // Click event listerner to our search button.
+// $("#citySearchBtn").on("click", function(event) {
+//   event.preventDefault();
+
+//   // This line grabs the input from the textbox
+//   var city = $("#citySearch").val().trim();
+//   var capitalizeCity = city.charAt(0).toUpperCase() + city.slice(1);
+
+//   // Adding city from the textbox to our array
+//   cities.push(capitalizeCity);
+
+//   // Calling renderButtons which handles the processing of our city array
+//   triposoAPI(capitalizeCity);
+//   // console.log(city);
+//       });
+
+
+
+// recent search sidebar
+// WHEN city is searched
+// THEN sidebar appears with recently searched cities
+// populated from local storage so on refresh, the recent options appear again
+
+//  When city is searched, city name is sent to the #recent div
+
+
+
+
 // Click event listerner to our search button.
 $("#citySearchBtn").on("click", function(event) {
   event.preventDefault();
@@ -101,35 +129,37 @@ $("#citySearchBtn").on("click", function(event) {
   // This line grabs the input from the textbox
   var city = $("#citySearch").val().trim();
   var capitalizeCity = city.charAt(0).toUpperCase() + city.slice(1);
-
-  // Adding city from the textbox to our array
-  cities.push(capitalizeCity);
-
-  // Calling renderButtons which handles the processing of our city array
-  triposoAPI(capitalizeCity);
-  // console.log(city);
-      });
-
-// Click event listerner to our search button.
-$("#citySearchBtn").on("click", function(event) {
-  event.preventDefault();
-
-  // This line grabs the input from the textbox
-  var city = $("#citySearch").val().trim();
-  var capitalizeCity = city.charAt(0).toUpperCase() + city.slice(1);
-
-  // Adding city from the textbox to our array
-  cities.push(capitalizeCity);
-
-  // Calling renderButtons which handles the processing of our city array
-  triposoAPI(capitalizeCity);
-  // console.log(city);
-      });
-
+  
   // Adding city from the textbox to our array
   cities.push(capitalizeCity);
   
-  
+  // Calling renderButtons which handles the processing of our city array
+  triposoAPI(capitalizeCity);
+  // console.log(city);
+    
+    localStorage.setItem(city, capitalizeCity);
+});
+
+// // Adding city from the textbox to our array
+// cities.push(capitalizeCity);
+
+// while loop
+function getCity() {
+  var cityArray = [ ],
+  keys = Object.keys(localStorage),
+  i = keys.length;
+
+  while (i--) {
+    cityArray.push(localStorage.getItem(keys[i]));
+  }
+  return cityArray;
+}
+
+// refer to unit 6 hw 6
+
+console.log(getCity());
+
+
 
   
   // IF there is an existing searchedCity div present
@@ -145,10 +175,6 @@ $("#citySearchBtn").on("click", function(event) {
     //       $("div").replace("#searchedCity");
     //   }
 
-  
-  
-  
-  
   
   
   
@@ -217,6 +243,9 @@ $.ajax({ url: weatherURL,
 //     $(".#").text("Humitidty:"+" "+response.main.humidity);
 
 //     $(".#").text("Wind speed:"+" "+response.wind.speed.toFixed(0));
+
+
+
 
 
 
