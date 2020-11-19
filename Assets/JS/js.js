@@ -44,24 +44,33 @@ function triposoAPI( capitalizeCity ) {
 
 
 // WeatherAPIKey API AJAX CALL
-function weatherAPI ( city ) {
-    var WeatherAPIKey = "a0ed00a1e03e86452a0e4c5419b896b8";
-    var weatherURL = "https://api.openweathermap.org/data/2.5/weather?q=" + city + "&appid=" + WeatherAPIKey;
-    console.log(weatherURL);
-    $.ajax({ url: weatherURL, method: "GET" }).then(function(response) {
-    
-      $("#citySearchBtn").on("click", function(event) {
-          event.preventDefault();
-          //      var tempF=(response.main.temp-273.15)* 1.80 + 32;          
-              // $(".#").html("<h1>"+response.name +" "+ "Weather Details</h1>");          
-  x            // $(".#").text("Temperature:"+" "+tempF.toFixed(0));          
-              // $(".#").text("Humitidty:"+" "+response.main.humidity);       
-              // $(".#").text("Wind speed:"+" "+response.wind.speed.toFixed(0));
-    });    
+function weatherAPI (city) {
+  
+  var WeatherAPIKey = "a0ed00a1e03e86452a0e4c5419b896b8";
+  var weatherURL = "https://api.openweathermap.org/data/2.5/weather?q=" + city + "&units=imperial&appid=" + WeatherAPIKey;
+  console.log(weatherURL);
+  
+  
+  $.ajax({ 
+    url: weatherURL, 
+    method: "GET" 
+  }).then(function(response) {
     console.log(response)
-    });
-};
+    var tempF=(response.main.temp);          
+    $("#weatherData").text("Temperature:"+" "+tempF.toFixed(0)+"°");  
+    var imageURL=response.weather[0].icon;
+    var iconImg=$("<img>").attr("src","http://openweathermap.org/img/wn/"+imageURL+"@2x.png");
+          console.log(imageURL)
+    $("#weatherData").append(iconImg)
+  
+  
+    $("#citySearchBtn").on("click", function(event) {
+      event.preventDefault();
+  
+    });    
 
+    });
+  };
 
 
 
