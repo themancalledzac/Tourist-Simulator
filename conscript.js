@@ -157,8 +157,6 @@ function getCity() {
 
 
 
-
-
 // refer to unit 6 hw 6
 
 console.log(getCity());
