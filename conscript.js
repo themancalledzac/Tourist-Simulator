@@ -92,6 +92,7 @@ function displayCity () {
 function previousCity () {
   
 
+  
 };
 
 
@@ -101,21 +102,19 @@ function previousCity () {
 citySearchButton.on("click", function(event) {
     event.preventDefault();
     
-  // This line grabs the input from the textbox
-  var city = citySearchBox.val().trim();
-  var capitalizeCity = city.charAt(0).toUpperCase() + city.slice(1);
-
-  // Adding movie from the textbox to our array
-  cities.push(capitalizeCity);
-  
-  // Calling renderButtons which handles the processing of our movie array
-  triposoAPI(capitalizeCity);
-  // console.log(city);
+    // This line grabs the input from the textbox
+    var city = citySearchBox.val().trim();
+    var capitalizeCity = city.charAt(0).toUpperCase() + city.slice(1);
+    
+    // Adding city from the textbox to our array
+    cities.push(capitalizeCity);
+    
+    // Calling renderButtons which handles the processing of our city array
+    triposoAPI(capitalizeCity);
+    // console.log(city);
 });
 
 
-// Adding movie from the textbox to our array
-cities.push(capitalizeCity);
 
 
 // while loop
@@ -136,13 +135,6 @@ console.log(getCity());
     
     
     
-    
-    
-
-
-
-
-console.log(response.results[0]);
 // Creating a div to hold the city & information
 var cityDiv = $("<div class='searchedCity'>");
 
