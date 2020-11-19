@@ -1,8 +1,10 @@
 
+
 .hero-section {
+    
     background: url("https://images.pexels.com/photos/7096/people-woman-coffee-meeting.jpg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260") 50% no-repeat;
     background-size: cover;
-    height: 60vh;
+    height: 40vh;
     text-align: center;
     display: -webkit-flex;
     display: -ms-flexbox;
@@ -15,15 +17,45 @@
             justify-content: center;
             
   }
-  
-  .hero-section .hero-section-text {
+ 
+  h1 {
+    font-size: 70px;
+    margin-bottom: 0rem;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    
+  }
+
+  h6 {
+    margin-top: 0rem;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    letter-spacing: 0.5rem;
+
+  }
+  .translucent-overlay {
+    max-width: 100%;
+    width: 100%;
+    background-color: rgba(4, 133, 109, 0.432);
+    padding: 0px;
     color: #fefefe;
-    text-shadow: 1px 1px 2px #0a0a0a;
   }
   
   
-.card-user-container {
+  .about-wrap {
+    text-align: center;
+    padding: 2rem;
     margin-bottom: 1rem;
+    margin-left: 6rem;
+    margin-right: 6rem;
+  }
+  
+  .sub-headline {
+    color: #777777;
+    margin: 0;
+    
+  }
+  
+.card-user-container {
+    margin-bottom: 3rem;
     background-color: #fefefe;
     color: #0a0a0a;
     overflow: hidden;
@@ -35,8 +67,8 @@
     display: block;
     margin: auto;
     border-radius: 50%;
-    width: 11.875rem;
-    height: 11.875rem;
+    width: 15rem;
+    height: 15rem;
     padding: 0.9375rem;
   }
   
@@ -47,50 +79,38 @@
   }
   
   .card-user-container .card-user-bio {
-    padding: 1rem;
+    padding: 0rem;
     text-align: center;
-  }
-  
-  .card-user-container .card-user-bio .location {
-    display: inline-block;
-    margin: 0 0.9375rem;
-    color: #767676;
-    font-size: 0.875rem;
-  }
-  
-  .card-user-container .card-user-bio .location-icon,
-  .card-user-container .card-user-bio .location-text {
-    display: inline-block;
-    padding: 0 0.3125rem;
   }
   
   .card-user-container .card-user-social {
-    background: #e6e6e6;
-    padding: 1rem;
+    padding: 0rem;
     text-align: center;
+    color: #777777;
   }
   
   .card-user-container .card-user-social ul {
     display: inline-block;
   }
   
-  .card-user-container .card-user-social ul li {
-    margin: 0 10px;
-    font-size: 1.2em;
+  .card-user-container .card-user-social ul i {
+    margin: 0 1px;
     cursor: pointer;
   }
   
-  .card-user-container .card-user-social ul li:hover {
+  .card-user-container .card-user-social ul i:hover {
     -webkit-transform: scale(1.1);
         -ms-transform: scale(1.1);
             transform: scale(1.1);
   }
   
-  .card-user-container .card-user-button {
-    text-align: center;
-    padding: 1rem;
-  }
   
+  .medium {
+    font-size: 35px;
+    padding: 0 10px;
+    
+}
   
+
   
   
