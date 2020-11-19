@@ -15,9 +15,15 @@
     -webkit-justify-content: center;
         -ms-flex-pack: center;
             justify-content: center;
-            
+    position: relative;      
   }
  
+.top-bar{
+  position: absolute;
+  width: 100%;
+  top: 0px;
+}
+
   h1 {
     font-size: 70px;
     margin-bottom: 0rem;
