@@ -10,15 +10,12 @@ var triposoAPIToken = "yx4cnfzccsyrugqslwb2eqc2s92obaye";
 var WeatherAPIKey = "a0ed00a1e03e86452a0e4c5419b896b8";
 
 
+//-----------------------------------------------------------------------------------------------------------------------//
 
 
 // TriposoAPI Ajax call
-function triposoAPI( city ) {
-    // $("#searchedCity").empty();
-  for (var i = 0; i < cities.length; i++) {
-
-    var city = cities[i];
-    var triposoURL = "https://www.triposo.com/api/20200803/location.json?id=" + city + "&account=" + triposoAPIKey + "&token=" + triposoAPIToken;  
+function triposoAPI( capitalizeCity ) {
+    var triposoURL = "https://www.triposo.com/api/20200803/location.json?id=" + capitalizeCity + "&account=" + triposoAPIKey + "&token=" + triposoAPIToken;  
     console.log(triposoURL);
     $.ajax({ url: triposoURL,  method: "GET"
     
@@ -26,31 +23,30 @@ function triposoAPI( city ) {
            
           
           // city name found at: response.results[0].id
-          // var cityEl = response.results[0].id;
-          // // country name found at: response.results[0].country_id
-          // var countryEl = response.results[0].country_id;
-          // // cityImage  
-          // var imgURL = response.results[0].images[0].source_url;
+          var cityEl = response.results[0].id;
+          // country name found at: response.results[0].country_id
+          var countryEl = response.results[0].country_id;
+          // cityImage  
+          var imgURL = response.results[0].images[0].source_url;
 
-          // var city = { 'name': cityEl, 'country': countryEl, 'image': imgURL }
-          // response.results[0].id;
-          // // localStorage
-          // localStorage.setItem('city', city);
-          console.log(localStorage)
+          response.results[0].id;
+          // localStorage
+          // cities.push(cityObject);
+          // localStorage.setItem('city', cityObject);
+          console.log(response);
         });
-    }
-
+    // }
+    // displayCity ( cityEl , countryEl , )      
 };
 
 
-
+//----------------------------------------------------------------------------------------------------------------------//
 
 
 // WeatherAPIKey API AJAX CALL
-function weatherAPI ( response ) {
-    var city = cities[i];
+function weatherAPI ( city ) {
     var WeatherAPIKey = "a0ed00a1e03e86452a0e4c5419b896b8";
-    var weatherURL = "api.openweathermap.org/data/2.5/weather?q=" + city + "&appid=" + WeatherAPIKey;
+    var weatherURL = "https://api.openweathermap.org/data/2.5/weather?q=" + city + "&appid=" + WeatherAPIKey;
     console.log(weatherURL);
     $.ajax({ url: weatherURL, method: "GET" }).then(function(response) {
     
@@ -58,16 +54,9 @@ function weatherAPI ( response ) {
           event.preventDefault();
           //      var tempF=(response.main.temp-273.15)* 1.80 + 32;          
               // $(".#").html("<h1>"+response.name +" "+ "Weather Details</h1>");          
-              // $(".#").text("Temperature:"+" "+tempF.toFixed(0));          
+  x            // $(".#").text("Temperature:"+" "+tempF.toFixed(0));          
               // $(".#").text("Humitidty:"+" "+response.main.humidity);       
               // $(".#").text("Wind speed:"+" "+response.wind.speed.toFixed(0));
-
-
-          // MORE than likely, we will need to stringify localStorage data so we can add this data to that data
-          //
-
-
-
     });    
     console.log(response)
     });
@@ -108,11 +97,15 @@ citySearchButton.on("click", function(event) {
 
   // Adding movie from the textbox to our array
   cities.push(capitalizeCity);
-  localStorage.setItem("city", capitalizeCity);
-  
+  localStorage.setItem('cities', cities);
+  // localStorage.setItem('city', capitalizeCity);
   // Calling renderButtons which handles the processing of our movie array
   triposoAPI( capitalizeCity );
-  // weatherAPI();
+
+
+
+  
+  weatherAPI( city );
         //---------------------ONCE FINISHED---------------------------//
   displayCity();
   previousCity();
