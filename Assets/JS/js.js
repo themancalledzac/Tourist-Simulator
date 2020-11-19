@@ -33,7 +33,7 @@ function triposoAPI( capitalizeCity ) {
           // localStorage
           // cities.push(cityObject);
           // localStorage.setItem('city', cityObject);
-          console.log(cities);
+          console.log(response);
         });
     // }
     // displayCity ( cityEl , countryEl , )      
@@ -154,12 +154,3 @@ citySearchButton.on("click", function(event) {
 // // Putting the entire city div above previous city divs.
 // $("#searchedCity").prepend(cityDiv);
 
-
-
-
-
-// [
-//   {Seattle, USA, URL, Weather
-//   }
-//   {amsterdam, Netherlands, URL, Weather}
-// ]
