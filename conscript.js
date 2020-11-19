@@ -90,8 +90,22 @@ function displayCity () {
 
 
 function previousCity () {
-  
 
+  // using text from the link in sidebar
+  
+  // or name of city in local storage
+  // localStorage.getItem("cityname", cityName);
+  
+  // when link in previous city sidebar is clicked
+  // send to api calls
+  // then name of city gets called into triposo and weather
+  triposoAPI(city);
+
+  weatherAPI(city);
+
+  // and displays a card with that city's information
+  // run through create card function again
+  displayCity();
   
 };
 
@@ -115,15 +129,13 @@ citySearchButton.on("click", function(event) {
 });
 
 
-
-
 // while loop
 // place after #citySearchBtn
 
 // function grabs city from search bar and throws into local storage
 function getCity() {
   var cityArray = [ ],
-  keys = Object.keys(localStorage),
+  keys = obj.keys(localStorage),
   i = keys.length;
 
   while (i--) {
@@ -132,6 +144,8 @@ function getCity() {
   return cityArray;
 }
 console.log(getCity());
+
+
     
     
     
