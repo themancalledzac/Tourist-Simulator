@@ -15,6 +15,24 @@
   -webkit-justify-content: center;
   -ms-flex-pack: center;
   justify-content: center;
+  position: relative;
+}
+
+.top-bar {
+  position: absolute;
+  width: 100%;
+  top: 0px;
+  background-color: rgba(4, 133, 109, 0);
+  color: white
+}
+
+.top-bar, a {
+  color: white;
+  
+}
+ .top-bar ul {
+  background-color: transparent;
+  
 }
 
 .hero-section .hero-section-text {
