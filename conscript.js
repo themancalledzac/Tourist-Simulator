@@ -144,6 +144,7 @@ $("#citySearchBtn").on("click", function(event) {
 // cities.push(capitalizeCity);
 
 // while loop
+// place after #citySearchBtn
 function getCity() {
   var cityArray = [ ],
   keys = Object.keys(localStorage),
@@ -154,12 +155,10 @@ function getCity() {
   }
   return cityArray;
 }
-
-
+console.log(getCity());
 
 // refer to unit 6 hw 6
 
-console.log(getCity());
 
 
 // WHEN city is searched
