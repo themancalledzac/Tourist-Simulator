@@ -4,7 +4,7 @@
   background: url("https://www.australia.com/content/australia/en/places/brisbane-and-surrounds/guide-to-heron-island/jcr:content/hero/desktop.adapt.1920.high.jpg")
     50% no-repeat;
   background-size: cover;
-  height: 92.5vh;
+  height: 100vh;
   text-align: center;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -39,6 +39,7 @@
   color: #fefefe;
   text-shadow: 1px 1px 2px #0a0a0a;
 }
+
 
 #city {
   border: 1px solid;
