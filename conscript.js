@@ -155,10 +155,19 @@ function getCity() {
   return cityArray;
 }
 
+
+
+
+
 // refer to unit 6 hw 6
 
 console.log(getCity());
 
+
+// WHEN city is searched
+// city gets put into local storage
+// and gets sent to previousCity div
+// list items? links?
 
 
   
