@@ -26,14 +26,22 @@ function triposoAPI( capitalizeCity ) {
           var cityEl = response.results[0].id;
           // country name found at: response.results[0].country_id
           var countryEl = response.results[0].country_id;
+          // header contains city and country names. (still need to figure out how to remove _ in names)
+          $("#headingMain").text(cityEl + ", " + countryEl);
+          
           // cityImage  
           var imgURL = response.results[0].images[0].source_url;
+          $(".hero-section").css("background-image", "url(" + imgURL + ")");
+
+          // snippet from city
+          var citySnippetEl = response.results[0].snippet;
+          $("#paragraphMain").text(citySnippetEl);
 
           response.results[0].id;
           // localStorage
           // cities.push(cityObject);
           // localStorage.setItem('city', cityObject);
-          console.log(response);
+          console.log(response.results[0].country_id);
         });
     // }
     // displayCity ( cityEl , countryEl , )      
@@ -54,7 +62,7 @@ function weatherAPI ( city ) {
           event.preventDefault();
           //      var tempF=(response.main.temp-273.15)* 1.80 + 32;          
               // $(".#").html("<h1>"+response.name +" "+ "Weather Details</h1>");          
-  x            // $(".#").text("Temperature:"+" "+tempF.toFixed(0));          
+             // $(".#").text("Temperature:"+" "+tempF.toFixed(0));          
               // $(".#").text("Humitidty:"+" "+response.main.humidity);       
               // $(".#").text("Wind speed:"+" "+response.wind.speed.toFixed(0));
     });    
