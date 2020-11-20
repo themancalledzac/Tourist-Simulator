@@ -24,12 +24,13 @@
   top: 0px;
   background-color: rgba(4, 133, 109, 0);
   color: white
-  -webkit-backdrop-filter: blur(2px);
-  backdrop-filter: blur(2px);
+  
 }
 
 .top-bar, a {
   color: white;
+  -webkit-backdrop-filter: blur(2px);
+  backdrop-filter: blur(2px);
   
 }
  .top-bar ul {
