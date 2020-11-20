@@ -24,6 +24,7 @@
   top: 0px;
   -webkit-backdrop-filter: blur(2px);
   backdrop-filter: blur(2px);
+  
 }
 
 .menu-text {
@@ -31,6 +32,7 @@
 }
 
   h1 {
+    margin-top: 15%;
     font-size: 70px;
     margin-bottom: 0rem;
     font-family: Arial, Helvetica, sans-serif;
@@ -44,11 +46,13 @@
 
   }
   .translucent-overlay {
-    max-width: 100%;
+    
     width: 100%;
-    background-color:rgba(118, 118, 118, 0.315);
+    height: 50vh;
+    background-color:rgba(2, 2, 2, 0.315);
     padding: 0px;
     color: #fefefe;
+    
   }
   
   .top-bar, a, .top-bar ul {
