@@ -4,7 +4,7 @@
     
     background: url("https://images.pexels.com/photos/7096/people-woman-coffee-meeting.jpg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260") 50% no-repeat;
     background-size: cover;
-    height: 50vh;
+    height: 55vh;
     text-align: center;
     display: -webkit-flex;
     display: -ms-flexbox;
@@ -22,18 +22,20 @@
   position: absolute;
   width: 100%;
   top: 0px;
+  -webkit-backdrop-filter: blur(2px);
+  backdrop-filter: blur(2px);
 }
 
   h1 {
     font-size: 70px;
     margin-bottom: 0rem;
-    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-family: Arial, Helvetica, sans-serif;
     
   }
 
   h6 {
     margin-top: 0rem;
-    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-family: Arial, Helvetica, sans-serif;
     letter-spacing: 0.5rem;
 
   }
