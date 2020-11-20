@@ -42,10 +42,10 @@
   margin: 0;
 }
 
-#citySearch {
+#citySearch, .placeholder {
   border-radius: 25px;
-  background-color: #77777770;
-  color: white;
+  background-color: rgba(255, 255, 255, 0.815);
+  color: rgb(118, 118, 118);
 }
 
 
