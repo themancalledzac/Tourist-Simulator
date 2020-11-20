@@ -64,7 +64,6 @@ function weatherAPI (city) {
     url: weatherURL, 
     method: "GET" 
   }).then(function(response) {
->>>>>>> 1032c5c11fddef7bb8cda2036048794643b205bb
     console.log(response)
     var tempF=(response.main.temp);          
     $("#weatherData").text("Temperature:"+" "+tempF.toFixed(0)+"°");  
