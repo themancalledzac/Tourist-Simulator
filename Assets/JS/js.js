@@ -106,8 +106,12 @@ function previousCity () {
 
 
 // Click event listerner to our search button.
-citySearchButton.on("click", function(event) {
-    event.preventDefault();
+$("#citySearchBtn").click(function(event) {
+  event.preventDefault();
+// This line grabs the input from the textbox
+var city = $("input[name=citySearch]").val();
+console.log(city)
+var capitalizeCity = city.charAt(0).toUpperCase() + city.slice(1);
   // This line grabs the input from the textbox
   var city = citySearchBox.val().trim();
   var capitalizeCity = city.charAt(0).toUpperCase() + city.slice(1);
