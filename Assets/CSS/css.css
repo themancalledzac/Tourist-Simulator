@@ -38,13 +38,32 @@
   
 }
 
+.top-bar input {
+  margin: 0;
+}
+
+#citySearch {
+  border-radius: 25px;
+  background-color: #77777770;
+  color: white;
+}
+
+
+#citySearchBtn {
+  background-color: transparent;
+  font-size: x-large;
+  border-radius: 25px;
+  outline: none;
+  
+}
+
 .hero-section .hero-section-text {
   color: #fefefe;
+  margin: 6rem;
 }
 
 h1 {
-    font-size: 4rem;
-    
+  font-size: 70px;
     
 }
 
@@ -52,10 +71,10 @@ h1 {
   border: 1px solid;
 }
 
-.button {
-  border-radius: 10px;
-}
 
+.menu-text {
+  font-size: 20px;
+}
 
 
 

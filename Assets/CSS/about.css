@@ -26,6 +26,10 @@
   backdrop-filter: blur(2px);
 }
 
+.menu-text {
+  font-size: 20px;
+}
+
   h1 {
     font-size: 70px;
     margin-bottom: 0rem;
@@ -123,7 +127,7 @@
     padding: 0 10px;
     
 }
-  
+
 
 
   
