@@ -52,7 +52,6 @@ function triposoAPI( capitalizeCity ) {
 
 
 // WeatherAPIKey API AJAX CALL
-
 function weatherAPI (city) {
   
   var WeatherAPIKey = "a0ed00a1e03e86452a0e4c5419b896b8";
