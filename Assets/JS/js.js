@@ -43,8 +43,9 @@ function triposoAPI( capitalizeCity ) {
           // localStorage.setItem('city', cityObject);
           console.log(response.results[0].country_id);
         });
-    // }
-    // displayCity ( cityEl , countryEl , )      
+  // giving citydiv a background and drop shadow
+  $("#textMain").addClass("box");
+      
 };
 
 
@@ -65,20 +66,18 @@ function weatherAPI (city) {
   }).then(function(response) {
     console.log(response)
     var tempF=(response.main.temp);          
-    $("#weatherData").text("Temperature:"+" "+tempF.toFixed(0)+"°");  
-    var imageURL=response.weather[0].icon;
-    var iconImg=$("<img>").attr("src","http://openweathermap.org/img/wn/"+imageURL+"@2x.png");
+    $("#weatherData").text("Temperature: " + tempF);  
+    var imageURL = response.weather[0].icon;
+    var iconImg = $("<img>").attr("src","http://openweathermap.org/img/wn/"+imageURL+"@2x.png");
           console.log(imageURL)
     $("#weatherData").append(iconImg)
   
   
     $("#citySearchBtn").on("click", function(event) {
-      event.preventDefault();
-  
+      event.preventDefault();  
     });    
-
-    });
-  };
+  });
+};
 
 
 
@@ -118,12 +117,12 @@ citySearchButton.on("click", function(event) {
   // localStorage.setItem('city', capitalizeCity);
   // Calling renderButtons which handles the processing of our movie array
   triposoAPI( capitalizeCity );
-
-
-
+  
+  
+  
   
   weatherAPI( city );
-        //---------------------ONCE FINISHED---------------------------//
+  //---------------------ONCE FINISHED---------------------------//
   displayCity();
   previousCity();
   // console.log(city);

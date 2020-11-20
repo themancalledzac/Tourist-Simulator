@@ -23,31 +23,29 @@
   width: 100%;
   top: 0px;
   background-color: rgba(4, 133, 109, 0);
-  color: white
-  
+  color: white;
 }
 
-.top-bar, a {
+.top-bar,
+a {
   color: white;
   -webkit-backdrop-filter: blur(2px);
   backdrop-filter: blur(2px);
-  
 }
- .top-bar ul {
+.top-bar ul {
   background-color: transparent;
-  
 }
 
 .top-bar input {
   margin: 0;
 }
 
-#citySearch, .placeholder {
+#citySearch,
+.placeholder {
   border-radius: 25px;
   background-color: rgba(255, 255, 255, 0.815);
   color: rgb(118, 118, 118);
 }
-
 
 #citySearchBtn {
   background-color: transparent;
@@ -55,8 +53,6 @@
   border-radius: 25px;
   outline: none;
   padding: 0.5rem;
-  
-  
 }
 
 .hero-section .hero-section-text {
@@ -66,29 +62,24 @@
 
 h1 {
   font-size: 70px;
-    
 }
 
 #city {
   border: 1px solid;
 }
 
-
 .menu-text {
   font-size: 20px;
 }
 
-
-
 .card {
   width: 350px;
-    
-    background-color: rgba(4, 133, 109, 0.432);
-    padding: 20px;
-    color: #fefefe;
-    -webkit-backdrop-filter: blur(8px);
-    backdrop-filter: blur(2px);
-  
+
+  background-color: rgba(4, 133, 109, 0.432);
+  padding: 20px;
+  color: #fefefe;
+  -webkit-backdrop-filter: blur(8px);
+  backdrop-filter: blur(2px);
 }
 
 .card-info {
@@ -96,9 +87,9 @@ h1 {
   display: -ms-grid;
   display: grid;
   -ms-grid-rows: 1fr 2.5rem;
-      grid-template-rows: 1fr 2.5rem;
+  grid-template-rows: 1fr 2.5rem;
   -ms-grid-columns: 3fr 1fr;
-      grid-template-columns: 3fr 1fr;
+  grid-template-columns: 3fr 1fr;
 }
 
 .card-title {
@@ -111,16 +102,15 @@ h1 {
   grid-row: 2 / 3;
   grid-column: 1 / 2;
   -webkit-align-self: bottom;
-      -ms-flex-item-align: bottom;
-              -ms-grid-row-align: bottom;
-          align-self: bottom;
+  -ms-flex-item-align: bottom;
+  -ms-grid-row-align: bottom;
+  align-self: bottom;
 }
 
-
-
-
-
-  
-
-  
-  
+.box {
+  background-color: rgba(0, 0, 0, 0.55);
+  -webkit-box-shadow: 3px 4px 14px -2px rgba(0, 0, 0, 0.75);
+  -moz-box-shadow: 3px 4px 14px -2px rgba(0, 0, 0, 0.75);
+  box-shadow: 3px 4px 14px -2px rgba(0, 0, 0, 0.75);
+  padding: 0px 2em;
+}
