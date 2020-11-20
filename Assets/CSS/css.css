@@ -1,7 +1,7 @@
 /* main css file for project */
 
 .hero-section {
-  background: url("https://www.australia.com/content/australia/en/places/brisbane-and-surrounds/guide-to-heron-island/jcr:content/hero/desktop.adapt.1920.high.jpg")
+  background: url("https://images.pexels.com/photos/4554161/pexels-photo-4554161.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940")
     50% no-repeat;
   background-size: cover;
   height: 100vh;
@@ -24,6 +24,8 @@
   top: 0px;
   background-color: rgba(4, 133, 109, 0);
   color: white
+  -webkit-backdrop-filter: blur(2px);
+  backdrop-filter: blur(2px);
 }
 
 .top-bar, a {
@@ -37,9 +39,13 @@
 
 .hero-section .hero-section-text {
   color: #fefefe;
-  text-shadow: 1px 1px 2px #0a0a0a;
 }
 
+h1 {
+    font-size: 4rem;
+    
+    
+}
 
 #city {
   border: 1px solid;
@@ -47,6 +53,22 @@
 .button {
   border-radius: 10px;
 }
+
+
+.translucent-form-overlay {
+  max-width: 500px;
+  width: 100%;
+  background-color: rgba(4, 133, 109, 0.432);
+  padding: 20px;
+  color: #fefefe;
+  -webkit-backdrop-filter: blur(8px);
+  backdrop-filter: blur(2px);
+}
+
+.translucent-form-overlay .columns.row {
+  display: block;
+}
+
 
 
 
