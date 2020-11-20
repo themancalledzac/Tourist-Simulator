@@ -51,9 +51,11 @@
 
 #citySearchBtn {
   background-color: transparent;
-  font-size: x-large;
+  font-size: 28px;
   border-radius: 25px;
   outline: none;
+  padding: 0.5rem;
+  
   
 }
 
