@@ -131,34 +131,36 @@ function triposoAPI( capitalizeCity ) {
       // console.log(city);
     });
     
-    function previousCity () {
+    // function previousCity () {
       
-        // using name of city in local storage
-        var prevSearch = JSON.parse(localStorage.getItem('cities'));
-        // link is made
-        var searchLink = $("<button class='btn border mt-1 bg-white rounded' style='width: 12rem;'>").text(prevSearch);
-        var searchList = $("<li>");
-        searchList.append(searchLink);
-        $("#history").prepend(searchList)
-        // when link in previous city sidebar is clicked
+    //     // using name of city in local storage
+    //     var prevSearch = JSON.parse(localStorage.getItem('cities'));
+    //     // link is made
+    //     var searchLink = $("<button class='btn border mt-1 bg-white rounded' style='width: 12rem;'>").text(prevSearch);
+    //     var searchList = $("<li>");
+    //     searchList.append(searchLink);
+    //     $("#history").prepend(searchList)
+    //     // when link in previous city sidebar is clicked
         
-        // send to api calls
-        // then name of city gets called into triposo and weather
-        triposoAPI(capitalizeCity);
+    //     // send to api calls
+    //     // then name of city gets called into triposo and weather
+    //     triposoAPI(capitalizeCity);
         
-        weatherAPI(city);
+    //     weatherAPI(city);
         
-        // and displays a card with that city's information
-    };
+    //     // and displays a card with that city's information
+    // };
     
-    $("#history").on('click', '.btn', function(event) {
-      event.preventDefault();
-          console.log($(this).text());
-          geoAPI($(this).text());
+    //   $("#history").on('click', 'button', function(event) {
+    //   event.preventDefault();
+    //       console.log($(this).text());
+    //       geoAPI($(this).text());
       
-      });
+    //   });
     
-    // ------------------------BEHOLD. MY FUTURE STUFF-------------------------------------------------------//
+    
+    
+      // ------------------------BEHOLD. MY FUTURE STUFF-------------------------------------------------------//
 
 
 // Google image API
