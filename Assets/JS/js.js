@@ -107,30 +107,26 @@ function previousCity () {
 // Click event listerner to our search button.
 $("#citySearchBtn").click(function(event) {
   event.preventDefault();
-// This line grabs the input from the textbox
-var city = $("input[name=citySearch]").val();
-console.log(city)
-var capitalizeCity = city.charAt(0).toUpperCase() + city.slice(1);
   // This line grabs the input from the textbox
-  var city = citySearchBox.val().trim();
-  var capitalizeCity = city.charAt(0).toUpperCase() + city.slice(1);
-
-  // Adding movie from the textbox to our array
-  cities.push(capitalizeCity);
-  localStorage.setItem('cities', cities);
-  // localStorage.setItem('city', capitalizeCity);
-  // Calling renderButtons which handles the processing of our movie array
-  triposoAPI( capitalizeCity );
-
-
-
-  
-  weatherAPI( city );
-        //---------------------ONCE FINISHED---------------------------//
-  displayCity();
-  previousCity();
-  // console.log(city);
+  var city = $("input[name=citySearch]").val();
   console.log(city)
+  var capitalizeCity = city.charAt(0).toUpperCase() + city.slice(1);
+    // This line grabs the input from the textbox
+    var city = citySearchBox.val().trim();
+    var capitalizeCity = city.charAt(0).toUpperCase() + city.slice(1);
+
+    // Adding movie from the textbox to our array
+    cities.push(capitalizeCity);
+    localStorage.setItem('cities', cities);
+    // localStorage.setItem('city', capitalizeCity);
+    // Calling renderButtons which handles the processing of our movie array
+    triposoAPI( capitalizeCity );
+
+    weatherAPI( city );
+          //---------------------ONCE FINISHED---------------------------//
+    displayCity();
+    previousCity();
+    // console.log(city);
 });
 
 

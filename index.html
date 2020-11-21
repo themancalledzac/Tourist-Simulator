@@ -8,6 +8,7 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/foundicons/3.0.0/foundation-icons.min.css"/>
     <link rel="stylesheet" href="./Assets/CSS/css.css">
 
+
     
   </head>
   <body>
@@ -25,11 +26,9 @@
       <div class="top-bar-right">
         <form id="myForm">
         <ul class="menu" id="menuBar">
-
-          <li> <input id="citySearch" type="search" autocomplete="on" placeholder="Enter City Name"></li>
-          <li><button id="citySearchBtn" type="button" class="button">Search</button></li>
-          <LI><button id="luckyBtn" class="button success">I Feel Lucky!</button></LI>
-
+          <li><input id="citySearch" type="text" name="citySearch" autocomplete="on" placeholder="Enter City Name"></li>
+          <li><button id="citySearchBtn" type="submit" class="button"><i class="fi-magnifying-glass large"></i></button></li>
+          <!--<LI><button id="luckyBtn" class="button success">I Feel Lucky!</button></LI>-->
         </ul>
       </form>
       </div>
@@ -87,17 +86,9 @@
     </div>
     -->
 
-    <div class="recent">
-      
-    </div>
-
-
     <script src="https://code.jquery.com/jquery-2.1.4.min.js"></script>
     <script src="https://dhbhdrzi4tiry.cloudfront.net/cdn/sites/foundation.js"></script>
-
-    <script>
-      $(document).foundation();
-    </script>
+    <script>      $(document).foundation();    </script>
     <script src="./conscript.js" ></script>
   </body>
 </html>
