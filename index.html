@@ -11,35 +11,45 @@
 
     
   </head>
+  
   <body>
     <!--Home page main screen with a large background picture-->
     <div class="hero-section" id="picture">
-      <!--Nav bar-->
-    <div class="top-bar">
-      <div class="top-bar-left">
-        <ul class="dropdown menu" data-dropdown-menu>
-          <li class="menu-text">Travel <strong>Simulat<i class="fi-marker medium"></i>r</strong></li>
-          <!-- <li><a href="index.html">Home</a></li> -->
-          <li><a href="about.html">About</a></li>
-        </ul>
+        <!--Nav bar-->
+      <div class="top-bar">
+        <div class="top-bar-left">
+          <ul class="dropdown menu" data-dropdown-menu>
+            <li class="menu-text">Travel <strong>Simulat<i class="fi-marker medium"></i>r</strong></li>
+            <!-- <li><a href="index.html">Home</a></li> -->
+            <li><a href="about.html">About</a></li>
+          </ul>
+        </div>
+        
+        <div class="top-bar-right">
+          <form id="myForm">
+            <ul class="menu" id="menuBar">
+              <li><input id="citySearch" type="text" name="citySearch" autocomplete="on" placeholder="Enter City Name"></li>
+              <li><button id="citySearchBtn" type="submit" class="button"><i class="fi-magnifying-glass large"></i></button></li>
+              <!--<LI><button id="luckyBtn" class="button success">I Feel Lucky!</button></LI>-->
+              <ul class="side-nav history">
+                <li>placeholder</li>
+              </ul>
+            </ul>
+         </form>
+        </div>
+      
       </div>
-      <div class="top-bar-right">
-        <form id="myForm">
-        <ul class="menu" id="menuBar">
-          <li><input id="citySearch" type="text" name="citySearch" autocomplete="on" placeholder="Enter City Name"></li>
-          <li><button id="citySearchBtn" type="submit" class="button"><i class="fi-magnifying-glass large"></i></button></li>
-          <!--<LI><button id="luckyBtn" class="button success">I Feel Lucky!</button></LI>-->
-        </ul>
-      </form>
-      </div>
-    </div>
-    <div class="m-5">
-    <div class="hero-section-text" id="textMain">
-      <h1 id="headingMain">Explore</h1>
-      <h3 id="countryEl"></h3>
-      <h5 id="weatherData">The World From Bed</h5>
-      <p id="paragraphEl"></p>
-    </div>  
+  
+      
+  
+      <div class="m-5">
+        <div class="hero-section-text" id="textMain">
+          <h1 id="headingMain">Explore</h1>
+          <h3 id="countryEl"></h3>
+          <h5 id="weatherData">The World From Bed</h5>
+          <p id="paragraphEl"></p>
+      </div>  
+    
   </div>
     
   
