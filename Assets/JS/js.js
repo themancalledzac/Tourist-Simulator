@@ -141,7 +141,6 @@ $( function previousCity() {
   // populate autocomplete in #citySearch
   $( "#citySearch" ).autocomplete({source: cityComplete});
 } );
-
 // };
 
 
