@@ -25,8 +25,7 @@ function triposoAPI( capitalizeCity ) {
           // city name found at: response.results[0].id
           var cityEl = response.results[0].id;
           // country name found at: response.results[0].country_id
-          var countryEl = response.results[0].country_id;
-          // header contains city and country names. (still need to figure out how to remove _ in names)
+          var countryEl = response.results[0].country_id.replace(/_/g, " ");          // header contains city and country names. (still need to figure out how to remove _ in names)
           $("#headingMain").text(cityEl + ", " + countryEl);
           
           // cityImage  
