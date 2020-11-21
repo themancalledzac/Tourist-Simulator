@@ -36,16 +36,7 @@ function geoAPI( capitalizeCity ) {
     var countryEl = response.data[0].country;      // header contains city and country names. (still need to figure out how to remove _ in names)
     $("#headingMain").text(cityEl);
     $("#countryEl").text(countryEl);
-    // cityImage  
-    // var imgURL = response.results[0].images[0].source_url;
-    // $(".hero-section").css("background-image", "url(" + imgURL + ")");
-    // $(".hero-section").css("background-filter", "blur(4px)");
-    
-    // snippet from city
-    // var citySnippetEl = response.results[0].snippet;
-    // $("#paragraphMain").text(citySnippetEl);
-    
-    // giving citydiv a background and drop shadow
+
     $("#textMain").addClass("box");
 
     console.log(response.data);
@@ -65,8 +56,7 @@ function weatherAPI (city) {
   var WeatherAPIKey = "a0ed00a1e03e86452a0e4c5419b896b8";
   var weatherURL = "https://api.openweathermap.org/data/2.5/weather?q=" + city + "&units=imperial&appid=" + WeatherAPIKey;
   console.log(weatherURL);
-  
-  
+   
   $.ajax({ 
     url: weatherURL, 
     method: "GET" 
@@ -77,9 +67,7 @@ function weatherAPI (city) {
     var imageURL = response.weather[0].icon;
     var iconImg = $("<img>").attr("src","http://openweathermap.org/img/wn/"+imageURL+"@2x.png");
           console.log(imageURL)
-    $("#weatherData").append(iconImg)
-  
-  
+    $("#weatherData").append(iconImg) 
     $("#citySearchBtn").on("click", function(event) {
       event.preventDefault();  
     });    
@@ -95,18 +83,8 @@ function weatherAPI (city) {
 function triposoAPI( capitalizeCity ) {
   var triposoURL = "https://www.triposo.com/api/20200803/location.json?id=" + capitalizeCity + "&account=" + triposoAPIKey + "&token=" + triposoAPIToken;  
   console.log(triposoURL);
-  $.ajax({ url: triposoURL,  method: "GET"
-  
-      }).then(function(response) {
-         
-        
-        // // city name found at: response.results[0].id
-        // var cityEl = response.results[0].id;
-        // // country name found at: response.results[0].country_id
-        // var countryEl = response.results[0].country_id.replace(/_/g, " ");          // header contains city and country names. (still need to figure out how to remove _ in names)
-        // $("#headingMain").text(cityEl + ", " + countryEl);
-        
-        // cityImage  
+  $.ajax({ url: triposoURL,  method: "GET" 
+      }).then(function(response) {       
         var imgURL = response.results[0].images[0].source_url;
         $(".hero-section").css("background-image", "url(" + imgURL + ")");
 
@@ -119,37 +97,10 @@ function triposoAPI( capitalizeCity ) {
         // cities.push(cityObject);
         // localStorage.setItem('city', cityObject);
         console.log(response.results[0].country_id);
-      });
-  // }
-  // displayCity ( cityEl , countryEl , )      
+      }); 
 };
 
-// Google image API
-// function googleImg ( city ) {
-//   googleAPIKey = AIzaSyAPeiRIAKmZHyg0iRZtShVzhInKKRiQv1I;
-//   googleURL = "https://maps.googleapis.com/maps/api/place/photo?maxwidth=1900&photoreferencekey=" + googleAPIKey + ""
-// };
 
-
-
-// function displayCity () {
-
-//   // document get data from localStorage
-//   // change background-image data for .hero-selection
-//   // change h1 text for headingMain
-//   // change h5 text for paragraphMain
-// };
-
-
-
-
-
-// function previousCity () {
-//   // clear local storage
-//   // push cities array to localStorage
-  
-
-// };
 
 
 
@@ -184,42 +135,32 @@ var capitalizeCity = city.charAt(0).toUpperCase() + city.slice(1);
 
 
 
+// ------------------------BEHOLD. MY FUTURE STUFF-------------------------------------------------------//
+
+
+// Google image API
+// function googleImg ( city ) {
+//   googleAPIKey = AIzaSyAPeiRIAKmZHyg0iRZtShVzhInKKRiQv1I;
+//   googleURL = "https://maps.googleapis.com/maps/api/place/photo?maxwidth=1900&photoreferencekey=" + googleAPIKey + ""
+// };
+
+
+
+// function displayCity () {
+
+//   // document get data from localStorage
+//   // change background-image data for .hero-selection
+//   // change h1 text for headingMain
+//   // change h5 text for paragraphMain
+// };
 
 
 
 
 
-// console.log(response.results[0]);
-// // Creating a div to hold the city & information
-// var cityDiv = $("<div class='searchedCity'>");
+// function previousCity () {
+//   // clear local storage
+//   // push cities array to localStorage
+  
 
-// // Storing the city name data
-// var cityEl = response.results[0].id;
-
-// // Creating an element to have the city name displayed
-// var pOne = $("<h2>").text( cityEl );
-
-// // Displaying the name
-// cityDiv.append(pOne);
-
-// // Storing the country name
-// var countryName = response.results[0].country_id;
-
-// // Creating an element to hold the country name
-// var pTwo = $("<h3>").text( countryName );
-
-// // Displaying the country name
-// cityDiv.append(pTwo);
-
-// // retreiving image URL
-// var imgURL = response.results[0].images[0].source_url;
-
-// // creating an element to hold the image
-// var image = $("<img>").attr("src", imgURL);
-
-// // Appending the image
-// cityDiv.append(image);
-
-// // Putting the entire city div above previous city divs.
-// $("#searchedCity").prepend(cityDiv);
-// 
+// };
