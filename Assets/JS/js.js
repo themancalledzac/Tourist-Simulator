@@ -15,7 +15,7 @@ var WeatherAPIKey = "a0ed00a1e03e86452a0e4c5419b896b8";
 
 // TriposoAPI Ajax call
 function triposoAPI( capitalizeCity ) {
-    var triposoURL = "https://www.triposo.com/api/20200803/location.json?id=" + capitalizeCity + "&account=" + triposoAPIKey + "&token=" + triposoAPIToken;  
+    var triposoURL = "https://www.triposo.com/api/20200803/location.json?id=" + capitalizeCity +"&account=" + triposoAPIKey + "&token=" + triposoAPIToken;  
     console.log(triposoURL);
     $.ajax({ url: triposoURL,  method: "GET"
     
@@ -53,7 +53,6 @@ function triposoAPI( capitalizeCity ) {
 // WeatherAPIKey API AJAX CALL
 function weatherAPI (city) {
   
-  var WeatherAPIKey = "a0ed00a1e03e86452a0e4c5419b896b8";
   var weatherURL = "https://api.openweathermap.org/data/2.5/weather?q=" + city + "&units=imperial&appid=" + WeatherAPIKey;
   console.log(weatherURL);
   
@@ -106,9 +105,11 @@ function previousCity () {
 
 // Click event listerner to our search button.
 $("#citySearchBtn").click(function(event) {
+  
   event.preventDefault();
 // This line grabs the input from the textbox
 var city = $("input[name=citySearch]").val();
+
 console.log(city)
 var capitalizeCity = city.charAt(0).toUpperCase() + city.slice(1);
   // This line grabs the input from the textbox
