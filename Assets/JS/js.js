@@ -45,7 +45,7 @@ function triposoAPI( capitalizeCity ) {
         });
   // giving citydiv a background and drop shadow
   $("#textMain").addClass("box");
-  $
+  
       
 };
 
@@ -55,9 +55,9 @@ function triposoAPI( capitalizeCity ) {
 
 // WeatherAPIKey API AJAX CALL
 function weatherAPI (city) {
-  
+  var cityEl = city.replace(/ /g,"_");
   var WeatherAPIKey = "a0ed00a1e03e86452a0e4c5419b896b8";
-  var weatherURL = "https://api.openweathermap.org/data/2.5/weather?q=" + city + "&units=imperial&appid=" + WeatherAPIKey;
+  var weatherURL = "https://api.openweathermap.org/data/2.5/weather?q=" + cityEl + "&units=imperial&appid=" + WeatherAPIKey;
   console.log(weatherURL);
   
   
