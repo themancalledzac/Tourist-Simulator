@@ -32,6 +32,7 @@ function triposoAPI( capitalizeCity ) {
           // cityImage  
           var imgURL = response.results[0].images[0].source_url;
           $(".hero-section").css("background-image", "url(" + imgURL + ")");
+          $(".hero-section").css("background-filter", "blur(4px)");
 
           // snippet from city
           var citySnippetEl = response.results[0].snippet;
@@ -45,6 +46,7 @@ function triposoAPI( capitalizeCity ) {
         });
   // giving citydiv a background and drop shadow
   $("#textMain").addClass("box");
+  $
       
 };
 

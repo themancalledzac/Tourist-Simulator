@@ -130,3 +130,8 @@ em {
 .small-9 {
   width: 100%;
 }
+
+.about-wrap {
+  margin-left: 0;
+  margin-right: 0;
+}
