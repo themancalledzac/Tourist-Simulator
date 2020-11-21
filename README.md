@@ -1,8 +1,8 @@
-# Group_14_Project_01
+# Tourist Simulator
 
-[live site](https://themancalledzac.github.io/Group_14_Project_01/)
+[Tourist Simulator website](https://themancalledzac.github.io/Group_14_Project_01/)
 
-Project Description
+## Project Description
 During these trying Covid times, wouldn't you like to simulate being a Tourist?
 
 1. Using this application,
@@ -19,6 +19,13 @@ During these trying Covid times, wouldn't you like to simulate being a Tourist?
 7. https://cloud.google.com/maps-platform/places
 8. http://geodb-cities-api.wirefreethought.com/
 9. https://openweathermap.org/api
+
+## Usage
+On mobile or on desktop, you're able to search cities around the world and see important information such as:
+
+- A picture of the city
+- Points of interest for tourism
+- Weather information to learn about the climate
 
 // frameworks and apis used:
 // https://get.foundation/index.html
