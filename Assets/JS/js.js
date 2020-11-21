@@ -108,19 +108,19 @@ function triposoAPI( capitalizeCity ) {
 // Click event listerner to our search button.
 $("#citySearchBtn").click(function(event) {
   event.preventDefault();
-// This line grabs the input from the textbox
-var city = $("input[name=citySearch]").val();
-console.log(city)
-var capitalizeCity = city.charAt(0).toUpperCase() + city.slice(1);
+  // This line grabs the input from the textbox
+  var city = $("input[name=citySearch]").val();
+  console.log(city)
+  var capitalizeCity = city.charAt(0).toUpperCase() + city.slice(1);
   // This line grabs the input from the textbox
   var city = citySearchBox.val().trim();
   var capitalizeCity = city.charAt(0).toUpperCase() + city.slice(1);
   var cityAllOne = capitalizeCity;
   cityAllOne = cityAllOne.replace(/ /g, "_");
-
+  
   // Adding movie from the textbox to our array
   cities.push(capitalizeCity);
-  localStorage.setItem('cities', cities);
+  localStorage.setItem('cities', JSON.stringify(cities));
   // localStorage.setItem('city', capitalizeCity);
   // Calling renderButtons which handles the processing of our movie array
   geoAPI( city );
@@ -133,6 +133,17 @@ var capitalizeCity = city.charAt(0).toUpperCase() + city.slice(1);
   console.log(city)
 });
 
+console.log(cities);
+
+$( function previousCity() {
+  // get info and parse from cities array in local storage
+  var cityComplete = JSON.parse(localStorage.getItem('cities'));
+  // populate autocomplete in #citySearch
+  $( "#citySearch" ).autocomplete({source: cityComplete});
+} );
+
+// };
+
 
 
 // ------------------------BEHOLD. MY FUTURE STUFF-------------------------------------------------------//
@@ -140,8 +151,8 @@ var capitalizeCity = city.charAt(0).toUpperCase() + city.slice(1);
 
 // Google image API
 // function googleImg ( city ) {
-//   googleAPIKey = AIzaSyAPeiRIAKmZHyg0iRZtShVzhInKKRiQv1I;
-//   googleURL = "https://maps.googleapis.com/maps/api/place/photo?maxwidth=1900&photoreferencekey=" + googleAPIKey + ""
+  //   googleAPIKey = AIzaSyAPeiRIAKmZHyg0iRZtShVzhInKKRiQv1I;
+  //   googleURL = "https://maps.googleapis.com/maps/api/place/photo?maxwidth=1900&photoreferencekey=" + googleAPIKey + ""
 // };
 
 
@@ -157,10 +168,3 @@ var capitalizeCity = city.charAt(0).toUpperCase() + city.slice(1);
 
 
 
-
-// function previousCity () {
-//   // clear local storage
-//   // push cities array to localStorage
-  
-
-// };
