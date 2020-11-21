@@ -71,3 +71,15 @@ h1 {
 .menu-text {
   font-size: 20px;
 }
+
+.box {
+  background-color: rgba(0, 0, 0, 0.7);
+  padding: 2em;
+}
+
+@media (max-width: 639px) {
+  .hero-section .hero-section-text {
+    color: #fefefe;
+    margin: 1rem;
+  }
+}

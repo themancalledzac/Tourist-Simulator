@@ -4,16 +4,14 @@ var citySearchButton = $("#citySearchBtn");
 var citySearchBox = $("#citySearch");
 
 // GLOBAL triposo API variables
-var geoAPIKey = "7ZTLRO4H";
-var geoAPIToken = "yx4cnfzccsyrugqslwb2eqc2s92obaye";
+var triposoAPIKey = "7ZTLRO4H";
+var triposoAPIToken = "yx4cnfzccsyrugqslwb2eqc2s92obaye";
 // GLOBAL Open Weather Map API Key
 var WeatherAPIKey = "a0ed00a1e03e86452a0e4c5419b896b8";
 
 
+
 //-----------------------------------------------------------------------------------------------------------------------//
-
-
-
 
 
 // geoAPI Ajax call
@@ -90,25 +88,68 @@ function weatherAPI (city) {
 
 
 
+//---------------------------------------------------------------------------------------------------------------------------//
 
-function displayCity () {
 
-  // document get data from localStorage
-  // change background-image data for .hero-selection
-  // change h1 text for headingMain
-  // change h5 text for paragraphMain
+// TriposoAPI Ajax call
+function triposoAPI( capitalizeCity ) {
+  var triposoURL = "https://www.triposo.com/api/20200803/location.json?id=" + capitalizeCity + "&account=" + triposoAPIKey + "&token=" + triposoAPIToken;  
+  console.log(triposoURL);
+  $.ajax({ url: triposoURL,  method: "GET"
+  
+      }).then(function(response) {
+         
+        
+        // // city name found at: response.results[0].id
+        // var cityEl = response.results[0].id;
+        // // country name found at: response.results[0].country_id
+        // var countryEl = response.results[0].country_id.replace(/_/g, " ");          // header contains city and country names. (still need to figure out how to remove _ in names)
+        // $("#headingMain").text(cityEl + ", " + countryEl);
+        
+        // cityImage  
+        var imgURL = response.results[0].images[0].source_url;
+        $(".hero-section").css("background-image", "url(" + imgURL + ")");
+
+        // snippet from city
+        var citySnippetEl = response.results[0].snippet;
+        $("#paragraphEl").text(citySnippetEl);
+
+        response.results[0].id;
+        // localStorage
+        // cities.push(cityObject);
+        // localStorage.setItem('city', cityObject);
+        console.log(response.results[0].country_id);
+      });
+  // }
+  // displayCity ( cityEl , countryEl , )      
 };
 
+// Google image API
+// function googleImg ( city ) {
+//   googleAPIKey = AIzaSyAPeiRIAKmZHyg0iRZtShVzhInKKRiQv1I;
+//   googleURL = "https://maps.googleapis.com/maps/api/place/photo?maxwidth=1900&photoreferencekey=" + googleAPIKey + ""
+// };
+
+
+
+// function displayCity () {
+
+//   // document get data from localStorage
+//   // change background-image data for .hero-selection
+//   // change h1 text for headingMain
+//   // change h5 text for paragraphMain
+// };
 
 
 
 
-function previousCity () {
-  // clear local storage
-  // push cities array to localStorage
+
+// function previousCity () {
+//   // clear local storage
+//   // push cities array to localStorage
   
 
-};
+// };
 
 
 
@@ -132,14 +173,11 @@ var capitalizeCity = city.charAt(0).toUpperCase() + city.slice(1);
   // localStorage.setItem('city', capitalizeCity);
   // Calling renderButtons which handles the processing of our movie array
   geoAPI( city );
-  
-  
-  
-  
   weatherAPI( city );
+  triposoAPI( capitalizeCity );
   //---------------------ONCE FINISHED---------------------------//
-  displayCity();
-  previousCity();
+  // displayCity();
+  // previousCity();
   // console.log(city);
   console.log(city)
 });
