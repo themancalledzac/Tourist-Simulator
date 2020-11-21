@@ -4,8 +4,8 @@ var citySearchButton = $("#citySearchBtn");
 var citySearchBox = $("#citySearch");
 
 // GLOBAL triposo API variables
-var triposoAPIKey = "7ZTLRO4H";
-var triposoAPIToken = "yx4cnfzccsyrugqslwb2eqc2s92obaye";
+var geoAPIKey = "7ZTLRO4H";
+var geoAPIToken = "yx4cnfzccsyrugqslwb2eqc2s92obaye";
 // GLOBAL Open Weather Map API Key
 var WeatherAPIKey = "a0ed00a1e03e86452a0e4c5419b896b8";
 
@@ -13,40 +13,46 @@ var WeatherAPIKey = "a0ed00a1e03e86452a0e4c5419b896b8";
 //-----------------------------------------------------------------------------------------------------------------------//
 
 
-// TriposoAPI Ajax call
-function triposoAPI( capitalizeCity ) {
-    var triposoURL = "https://www.triposo.com/api/20200803/location.json?id=" + capitalizeCity + "&account=" + triposoAPIKey + "&token=" + triposoAPIToken;  
-    console.log(triposoURL);
-    $.ajax({ url: triposoURL,  method: "GET"
+
+
+
+// geoAPI Ajax call
+function geoAPI( capitalizeCity ) {
     
-        }).then(function(response) {
-           
-          
-          // city name found at: response.results[0].id
-          var cityEl = response.results[0].id;
-          // country name found at: response.results[0].country_id
-          var countryEl = response.results[0].country_id.replace(/_/g, " ");          // header contains city and country names. (still need to figure out how to remove _ in names)
-          $("#headingMain").text(cityEl + ", " + countryEl);
-          
-          // cityImage  
-          var imgURL = response.results[0].images[0].source_url;
-          $(".hero-section").css("background-image", "url(" + imgURL + ")");
-          $(".hero-section").css("background-filter", "blur(4px)");
-
-          // snippet from city
-          var citySnippetEl = response.results[0].snippet;
-          $("#paragraphMain").text(citySnippetEl);
-
-          response.results[0].id;
-          // localStorage
-          // cities.push(cityObject);
-          // localStorage.setItem('city', cityObject);
-          console.log(response.results[0].country_id);
-        });
-  // giving citydiv a background and drop shadow
-  $("#textMain").addClass("box");
+  const settings = {
+    "async": true,
+    "crossDomain": true,
+    "url": "https://wft-geo-db.p.rapidapi.com/v1/geo/cities?namePrefix=" + capitalizeCity,
+    "method": "GET",
+    "headers": {
+      "x-rapidapi-key": "40b74e1f4amsh068422a7e0b07d6p129d70jsna842418e168e",
+      "x-rapidapi-host": "wft-geo-db.p.rapidapi.com"
+    }
+  };
   
-      
+  $.ajax(settings).done(function (response) {
+    
+    // city name found at: response.results[0].id
+    var cityEl = response.data[0].city;
+    // country name found at: response.results[0].country_id
+    var countryEl = response.data[0].country;      // header contains city and country names. (still need to figure out how to remove _ in names)
+    $("#headingMain").text(cityEl);
+    $("#countryEl").text(countryEl);
+    // cityImage  
+    // var imgURL = response.results[0].images[0].source_url;
+    // $(".hero-section").css("background-image", "url(" + imgURL + ")");
+    // $(".hero-section").css("background-filter", "blur(4px)");
+    
+    // snippet from city
+    // var citySnippetEl = response.results[0].snippet;
+    // $("#paragraphMain").text(citySnippetEl);
+    
+    // giving citydiv a background and drop shadow
+    $("#textMain").addClass("box");
+
+    console.log(response.data);
+  });
+
 };
 
 
@@ -125,12 +131,12 @@ var capitalizeCity = city.charAt(0).toUpperCase() + city.slice(1);
   localStorage.setItem('cities', cities);
   // localStorage.setItem('city', capitalizeCity);
   // Calling renderButtons which handles the processing of our movie array
-  triposoAPI( cityAllOne );
+  geoAPI( city );
   
   
   
   
-  weatherAPI( cityAllOne );
+  weatherAPI( city );
   //---------------------ONCE FINISHED---------------------------//
   displayCity();
   previousCity();
@@ -178,4 +184,4 @@ var capitalizeCity = city.charAt(0).toUpperCase() + city.slice(1);
 
 // // Putting the entire city div above previous city divs.
 // $("#searchedCity").prepend(cityDiv);
-
+// 
