@@ -1,141 +1,137 @@
-
-
 .hero-section {
-    
-    background: url("https://images.pexels.com/photos/7096/people-woman-coffee-meeting.jpg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260") 50% no-repeat;
-    background-size: cover;
-    height: 50vh;
-    text-align: center;
-    display: -webkit-flex;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-align-items: center;
-        -ms-flex-align: center;
-            align-items: center;
-    -webkit-justify-content: center;
-        -ms-flex-pack: center;
-            justify-content: center;
-    position: relative;      
-  }
+  background: url("https://images.pexels.com/photos/7096/people-woman-coffee-meeting.jpg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260")
+    50% no-repeat;
+  background-size: cover;
+  height: 50vh;
+  text-align: center;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  position: relative;
+}
 
-.top-bar{
+.top-bar {
   position: absolute;
   width: 100%;
   top: 0px;
   -webkit-backdrop-filter: blur(2px);
   backdrop-filter: blur(2px);
-  
 }
 
 .menu-text {
   font-size: 20px;
 }
 
-  h1 {
-    margin-top: 15%;
-    font-size: 70px;
-    margin-bottom: 0rem;
-    font-family: Arial, Helvetica, sans-serif;
-    
-  }
-
-  h6 {
-    margin-top: 0rem;
-    font-family: Arial, Helvetica, sans-serif;
-    letter-spacing: 0.5rem;
-
-  }
-  .translucent-overlay {
-    
-    width: 100%;
-    height: 50vh;
-    background-color:rgba(2, 2, 2, 0.315);
-    padding: 0px;
-    color: #fefefe;
-    
-  }
-  
-  .top-bar, a, .top-bar ul {
-    background-color: #77777700;
-    color: white
-  }
-  
-  em {
-    font-size: 50px;
-  }
-
-  .about-wrap {
-    text-align: center;
-    padding: 2rem;
-    margin-bottom: 1rem;
-    margin-left: 6rem;
-    margin-right: 6rem;
-  }
-  
-  .sub-headline {
-    color: #777777;
-    margin: 0;
-    
-  }
-  
-.card-user-container {
-    margin-bottom: 3rem;
-    background-color: #fefefe;
-    color: #0a0a0a;
-    overflow: hidden;
-    padding: 0;
-    border-radius: 0;
-  }
-  
-  .card-user-container .card-user-avatar .user-image {
-    display: block;
-    margin: auto;
-    border-radius: 50%;
-    width: 15rem;
-    height: 15rem;
-    padding: 0.9375rem;
-  }
-  
-  .card-user-container .card-user-avatar .user-image:hover {
-    -webkit-transform: scale(1.1);
-        -ms-transform: scale(1.1);
-            transform: scale(1.1);
-  }
-  
-  .card-user-container .card-user-bio {
-    padding: 0rem;
-    text-align: center;
-  }
-  
-  .card-user-container .card-user-social {
-    padding: 0rem;
-    text-align: center;
-    color: #777777;
-  }
-  
-  .card-user-container .card-user-social ul {
-    display: inline-block;
-  }
-  
-  .card-user-container .card-user-social ul i {
-    margin: 0 1px;
-    cursor: pointer;
-  }
-  
-  .card-user-container .card-user-social ul i:hover {
-    -webkit-transform: scale(1.1);
-        -ms-transform: scale(1.1);
-            transform: scale(1.1);
-  }
-  
-  
-  .medium {
-    font-size: 35px;
-    padding: 0 10px;
-    
+h1 {
+  margin-top: 15%;
+  font-size: 70px;
+  margin-bottom: 0rem;
+  font-family: Arial, Helvetica, sans-serif;
 }
 
+h6 {
+  margin-top: 0rem;
+  font-family: Arial, Helvetica, sans-serif;
+  letter-spacing: 0.5rem;
+}
+.translucent-overlay {
+  width: 100%;
+  height: 50vh;
+  background-color: rgba(2, 2, 2, 0.315);
+  padding: 0px;
+  color: #fefefe;
+}
 
+.top-bar,
+a,
+.top-bar ul {
+  background-color: #77777700;
+  color: white;
+}
 
-  
-  
+em {
+  font-size: 50px;
+}
+
+.about-wrap {
+  text-align: center;
+  padding: 2rem;
+  margin-bottom: 1rem;
+  margin-left: 6rem;
+  margin-right: 6rem;
+}
+
+.sub-headline {
+  color: #777777;
+  margin: 0;
+}
+
+.card-user-container {
+  margin-bottom: 3rem;
+  background-color: #fefefe;
+  color: #0a0a0a;
+  overflow: hidden;
+  padding: 0;
+  border-radius: 0;
+}
+
+.card-user-container .card-user-avatar .user-image {
+  display: block;
+  margin: auto;
+  border-radius: 50%;
+  width: 15rem;
+  height: 15rem;
+  padding: 0.9375rem;
+}
+
+.card-user-container .card-user-avatar .user-image:hover {
+  -webkit-transform: scale(1.1);
+  -ms-transform: scale(1.1);
+  transform: scale(1.1);
+}
+
+.card-user-container .card-user-bio {
+  padding: 0rem;
+  text-align: center;
+}
+
+.card-user-container .card-user-social {
+  padding: 0rem;
+  text-align: center;
+  color: #777777;
+}
+
+.card-user-container .card-user-social ul {
+  display: inline-block;
+}
+
+.card-user-container .card-user-social ul i {
+  margin: 0 1px;
+  cursor: pointer;
+}
+
+.card-user-container .card-user-social ul i:hover {
+  -webkit-transform: scale(1.1);
+  -ms-transform: scale(1.1);
+  transform: scale(1.1);
+}
+
+.medium {
+  font-size: 35px;
+  padding: 0 10px;
+}
+
+.small-9 {
+  width: 100%;
+}
+
+.about-wrap {
+  margin-left: 0;
+  margin-right: 0;
+}
