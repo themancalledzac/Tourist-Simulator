@@ -25,8 +25,7 @@ function triposoAPI( capitalizeCity ) {
           // city name found at: response.results[0].id
           var cityEl = response.results[0].id;
           // country name found at: response.results[0].country_id
-          var countryEl = response.results[0].country_id;
-          // header contains city and country names. (still need to figure out how to remove _ in names)
+          var countryEl = response.results[0].country_id.replace(/_/g, " ");          // header contains city and country names. (still need to figure out how to remove _ in names)
           $("#headingMain").text(cityEl + ", " + countryEl);
           
           // cityImage  
@@ -52,7 +51,6 @@ function triposoAPI( capitalizeCity ) {
 
 
 // WeatherAPIKey API AJAX CALL
-
 function weatherAPI (city) {
   
   var WeatherAPIKey = "a0ed00a1e03e86452a0e4c5419b896b8";
@@ -64,7 +62,6 @@ function weatherAPI (city) {
     url: weatherURL, 
     method: "GET" 
   }).then(function(response) {
->>>>>>> 1032c5c11fddef7bb8cda2036048794643b205bb
     console.log(response)
     var tempF=(response.main.temp);          
     $("#weatherData").text("Temperature:"+" "+tempF.toFixed(0)+"°");  
@@ -108,8 +105,12 @@ function previousCity () {
 
 
 // Click event listerner to our search button.
-citySearchButton.on("click", function(event) {
-    event.preventDefault();
+$("#citySearchBtn").click(function(event) {
+  event.preventDefault();
+// This line grabs the input from the textbox
+var city = $("input[name=citySearch]").val();
+console.log(city)
+var capitalizeCity = city.charAt(0).toUpperCase() + city.slice(1);
   // This line grabs the input from the textbox
   var city = citySearchBox.val().trim();
   var capitalizeCity = city.charAt(0).toUpperCase() + city.slice(1);
