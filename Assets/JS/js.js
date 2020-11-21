@@ -63,7 +63,7 @@ function weatherAPI (city) {
   }).then(function(response) {
     console.log(response)
     var tempF = (response.main.temp);          
-    $("#weatherData").text("Temperature: " + tempF);  
+    $("#weatherData").text("Temperature: " + tempF.toFixed(0)+"°");  
     var imageURL = response.weather[0].icon;
     var iconImg = $("<img>").attr("src","http://openweathermap.org/img/wn/"+imageURL+"@2x.png");
           console.log(imageURL)
