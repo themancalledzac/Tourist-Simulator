@@ -22,32 +22,30 @@
   position: absolute;
   width: 100%;
   top: 0px;
-  background-color:rgba(2, 2, 2, 0);
-  color: white
-  
+  background-color: rgba(2, 2, 2, 0);
+  color: white;
 }
 
-.top-bar, a {
+.top-bar,
+a {
   color: white;
   -webkit-backdrop-filter: blur(2px);
   backdrop-filter: blur(2px);
-  
 }
- .top-bar ul {
+.top-bar ul {
   background-color: transparent;
-  
 }
 
 .top-bar input {
   margin: 0;
 }
 
-#citySearch, .placeholder {
+#citySearch,
+.placeholder {
   border-radius: 25px;
   background-color: rgba(255, 255, 255, 0.815);
   color: rgb(118, 118, 118);
 }
-
 
 #citySearchBtn {
   background-color: transparent;
@@ -55,8 +53,6 @@
   border-radius: 25px;
   outline: none;
   padding: 0.5rem;
-  
-  
 }
 
 .hero-section .hero-section-text {
@@ -66,22 +62,28 @@
 
 h1 {
   font-size: 70px;
-    
 }
 
 #city {
   border: 1px solid;
 }
 
-
 .menu-text {
   font-size: 20px;
 }
 
+.box {
+  background-color: rgba(0, 0, 0, 0.7);
+  padding: 2em;
+  border-radius: 10px;
+  -webkit-box-shadow: 2px 2px 15px -2px rgba(0, 0, 0, 0.68);
+  -moz-box-shadow: 2px 2px 15px -2px rgba(0, 0, 0, 0.68);
+  box-shadow: 2px 2px 15px -2px rgba(0, 0, 0, 0.68);
+}
 
-
-
-  
-
-  
-  
+@media (max-width: 639px) {
+  .hero-section .hero-section-text {
+    color: #fefefe;
+    margin: 1rem;
+  }
+}
