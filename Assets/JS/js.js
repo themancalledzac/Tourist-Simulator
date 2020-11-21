@@ -55,9 +55,11 @@ function triposoAPI( capitalizeCity ) {
 
 // WeatherAPIKey API AJAX CALL
 function weatherAPI (city) {
-  var cityEl = city.replace(/ /g,"_");
+  // var cityEl = city
+  // cityEl = cityEl.replace(" " , "_");
+  // console.log(cityEl);
   var WeatherAPIKey = "a0ed00a1e03e86452a0e4c5419b896b8";
-  var weatherURL = "https://api.openweathermap.org/data/2.5/weather?q=" + cityEl + "&units=imperial&appid=" + WeatherAPIKey;
+  var weatherURL = "https://api.openweathermap.org/data/2.5/weather?q=" + city + "&units=imperial&appid=" + WeatherAPIKey;
   console.log(weatherURL);
   
   
@@ -66,7 +68,7 @@ function weatherAPI (city) {
     method: "GET" 
   }).then(function(response) {
     console.log(response)
-    var tempF=(response.main.temp);          
+    var tempF = (response.main.temp);          
     $("#weatherData").text("Temperature: " + tempF);  
     var imageURL = response.weather[0].icon;
     var iconImg = $("<img>").attr("src","http://openweathermap.org/img/wn/"+imageURL+"@2x.png");
@@ -115,18 +117,20 @@ var capitalizeCity = city.charAt(0).toUpperCase() + city.slice(1);
   // This line grabs the input from the textbox
   var city = citySearchBox.val().trim();
   var capitalizeCity = city.charAt(0).toUpperCase() + city.slice(1);
+  var cityAllOne = capitalizeCity;
+  cityAllOne = cityAllOne.replace(/ /g, "_");
 
   // Adding movie from the textbox to our array
   cities.push(capitalizeCity);
   localStorage.setItem('cities', cities);
   // localStorage.setItem('city', capitalizeCity);
   // Calling renderButtons which handles the processing of our movie array
-  triposoAPI( capitalizeCity );
+  triposoAPI( cityAllOne );
   
   
   
   
-  weatherAPI( city );
+  weatherAPI( cityAllOne );
   //---------------------ONCE FINISHED---------------------------//
   displayCity();
   previousCity();
