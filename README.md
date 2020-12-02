@@ -1,6 +1,6 @@
 # Tourist Simulator
 
-[Tourist Simulator website](https://themancalledzac.github.io/Group_14_Project_01/)
+[Tourist Simulator website](https://themancalledzac.github.io/Tourist-Simulator/)
 
 ## Project Description
 During these trying Covid times, wouldn't you like to simulate being a Tourist?
